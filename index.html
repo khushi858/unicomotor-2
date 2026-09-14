@@ -1,0 +1,5543 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Unico Motors | Reliable Auto Services & Repair</title>
+
+    <meta
+      name="description"
+      content="UNICO MOTORS provides reliable car repair, maintenance, diagnostics, AC services, body repair, detailing and complete automotive care."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================================================
+   RESET
+========================================================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Inter", Arial, sans-serif;
+        background: #f3f4f5;
+        color: #111a21;
+        overflow-x: hidden;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      button,
+      input,
+      textarea,
+      select {
+        font-family: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* =========================================================
+   VARIABLES
+========================================================= */
+
+      :root {
+        --black: #0b1116;
+        --dark: #101820;
+        --dark2: #17222b;
+        --orange: #f15a29;
+        --orange-dark: #d9471c;
+        --white: #ffffff;
+        --light: #f3f4f5;
+        --line: #d9dee2;
+        --muted: #68747d;
+        --max: 1240px;
+      }
+
+      /* =========================================================
+   COMMON
+========================================================= */
+
+      .container {
+        width: min(var(--max), calc(100% - 48px));
+        margin: auto;
+      }
+
+      .section {
+        padding: 100px 0;
+      }
+
+      .section-small {
+        padding: 75px 0;
+      }
+
+      .section.dark {
+        background: var(--dark);
+        color: #fff;
+      }
+
+      .kicker {
+        color: var(--orange);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2.2px;
+        text-transform: uppercase;
+        margin-bottom: 13px;
+      }
+
+      .kicker::before {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 2px;
+        background: #f47b00;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Barlow Condensed", sans-serif;
+        text-transform: uppercase;
+        line-height: 0.94;
+      }
+
+      h2 {
+        font-size: clamp(46px, 5vw, 72px);
+        letter-spacing: -0.5px;
+      }
+
+      .section-intro {
+        max-width: 590px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.85;
+      }
+
+      .dark .section-intro {
+        color: #b9c3ca;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50px;
+        padding: 0 23px;
+        background: #f47b00;
+        color: #fff;
+        border: 1px solid var(--orange);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        transition: 0.25s ease;
+      }
+
+      .btn:hover {
+        background: var(--orange-dark);
+        border-color: var(--orange-dark);
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        background: transparent;
+        border-color: #68747d;
+      }
+
+      .btn-outline:hover {
+        background: #fff;
+        color: var(--dark);
+        border-color: #fff;
+      }
+
+      .btn-dark {
+        background: var(--dark);
+        border-color: var(--dark);
+      }
+
+      .btn-dark:hover {
+        background: #000;
+        border-color: #000;
+      }
+
+      /* =========================================================
+   TOP BAR
+========================================================= */
+
+      .topbar {
+        background: #070c10;
+        color: #cbd3d8;
+        font-size: 11px;
+        letter-spacing: 0.2px;
+      }
+
+      .topbar-inner {
+        min-height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 25px;
+      }
+
+      .top-left {
+        opacity: 0.9;
+      }
+
+      .top-right {
+        display: flex;
+        gap: 20px;
+      }
+
+      .top-right a:hover {
+        color: #fff;
+      }
+
+      /* =========================================================
+   NAVBAR
+========================================================= */
+
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid #e5e8ea;
+      }
+
+      .nav-inner {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        flex-shrink: 0;
+      }
+
+      .logo-mark {
+        width: 43px;
+        height: 43px;
+        background: #f47b00;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 25px;
+        font-weight: 900;
+        clip-path: polygon(0 0, 100% 0, 82% 100%, 0 100%);
+      }
+
+      .logo-text {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 29px;
+        line-height: 0.8;
+        font-weight: 900;
+        letter-spacing: 0.8px;
+      }
+
+      .logo-sub {
+        display: block;
+        margin-top: 7px;
+        color: #77828a;
+        font-family: "Inter", sans-serif;
+        font-size: 7px;
+        font-weight: 800;
+        letter-spacing: 2.2px;
+      }
+
+      .nav-links {
+        position: relative;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      .nav-links a {
+        position: relative;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        padding: 31px 0;
+      }
+
+      .nav-links a:not(.nav-button)::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 23px;
+        height: 2px;
+        background: #f47b00;
+        transition: 0.25s;
+      }
+
+      .nav-links a:hover::after {
+        right: 0;
+      }
+
+      .nav-button {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 13px 18px !important;
+        color: #fff !important;
+        background: #f47b00;
+      }
+
+      .nav-button:hover {
+        background: var(--orange-dark);
+      }
+
+      .mobile-menu {
+        display: none;
+        border: 0;
+        background: none;
+        font-size: 27px;
+        cursor: pointer;
+      }
+
+      /* =========================================================
+   HERO
+========================================================= */
+
+      .hero {
+        position: relative;
+        min-height: 680px;
+        overflow: hidden;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(6, 11, 15, 0.98) 0%,
+            rgba(6, 11, 15, 0.9) 38%,
+            rgba(6, 11, 15, 0.62) 63%,
+            rgba(6, 11, 15, 0.12) 100%
+          ),
+          url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=2000&q=90")
+            center center/cover no-repeat;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        width: 480px;
+        height: 480px;
+        right: -190px;
+        bottom: -260px;
+        border: 90px solid rgba(241, 90, 41, 0.22);
+        border-radius: 50%;
+      }
+
+      .hero-inner {
+        min-height: 680px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-content {
+        max-width: 740px;
+        color: #fff;
+      }
+
+      .hero-label {
+        color: #ffad8e;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 2.4px;
+        text-transform: uppercase;
+      }
+
+      .hero-label::before {
+        content: "";
+        display: inline-block;
+        width: 35px;
+        height: 2px;
+        background: #f47b00;
+        margin-right: 11px;
+        vertical-align: middle;
+      }
+
+      .hero h1 {
+        font-size: clamp(65px, 8vw, 112px);
+        margin: 20px 0 22px;
+        letter-spacing: -1px;
+      }
+
+      .hero h1 span {
+        color: var(--orange);
+      }
+
+      .hero-description {
+        max-width: 600px;
+        color: #d5dde2;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .hero-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 31px;
+      }
+
+      .hero-bottom {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 4;
+        background: rgba(8, 14, 19, 0.83);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .hero-bottom-inner {
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .hero-feature {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        color: #fff;
+      }
+
+      .hero-feature-icon {
+        width: 37px;
+        height: 37px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--orange);
+        font-size: 17px;
+      }
+
+      .hero-feature strong {
+        display: block;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+      }
+
+      .hero-feature span {
+        display: block;
+        color: #9ca8af;
+        font-size: 9px;
+        margin-top: 3px;
+      }
+
+      /* =========================================================
+   STATS
+========================================================= */
+
+      .stats {
+        background: #fff;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .stat {
+        padding: 27px 25px;
+        border-right: 1px solid var(--line);
+      }
+
+      .stat:last-child {
+        border-right: 0;
+      }
+
+      .stat-number {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 39px;
+        font-weight: 800;
+        line-height: 1;
+      }
+
+      .stat-label {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.3px;
+        text-transform: uppercase;
+      }
+
+      /* =========================================================
+   ABOUT
+========================================================= */
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 75px;
+        align-items: center;
+      }
+
+      .about-image {
+        min-height: 540px;
+        position: relative;
+        background:
+          linear-gradient(180deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.25)),
+          url("https://images.unsplash.com/photo-1632823469850-1f77e0c2f0e9?auto=format&fit=crop&w=1100&q=88")
+            center/cover;
+      }
+
+      .about-image::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 110px;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+      }
+
+      .about-badge {
+        position: absolute;
+        left: 25px;
+        bottom: 24px;
+        color: #fff;
+      }
+
+      .about-badge strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 60px;
+        line-height: 0.8;
+      }
+
+      .about-badge span {
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.8px;
+      }
+
+      .about-content h2 {
+        margin-bottom: 22px;
+      }
+
+      .about-content .section-intro {
+        margin-bottom: 25px;
+      }
+
+      .check-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+        margin: 25px 0 30px;
+      }
+
+      .check {
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 16px;
+        font-size: 11px;
+        font-weight: 700;
+      }
+
+      .check::before {
+        content: "✓";
+        color: var(--orange);
+        font-size: 14px;
+        margin-right: 8px;
+      }
+
+      /* =========================================================
+   SERVICES
+========================================================= */
+
+      .services-section {
+        background: #f0f2f3;
+      }
+
+      .section-heading {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 45px;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+      }
+
+      .service-card {
+        position: relative;
+        min-height: 245px;
+        padding: 28px;
+        background: #fff;
+        border: 1px solid var(--line);
+        overflow: hidden;
+        transition: 0.25s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 45px rgba(15, 24, 32, 0.12);
+        border-color: #c7cdd1;
+      }
+
+      .service-number {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        color: var(--orange);
+      }
+
+      .service-card h3 {
+        font-size: 29px;
+        margin: 22px 0 10px;
+      }
+
+      .service-card p {
+        color: var(--muted);
+        font-size: 11.5px;
+        line-height: 1.7;
+      }
+
+      .service-link {
+        display: inline-block;
+        margin-top: 20px;
+        color: var(--orange);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      .service-watermark {
+        position: absolute;
+        right: -8px;
+        bottom: -27px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 95px;
+        font-weight: 900;
+        color: #f1f2f3;
+        line-height: 1;
+        pointer-events: none;
+      }
+
+      /* =========================================================
+   ORANGE CTA
+========================================================= */
+
+      .orange-cta {
+        background: #f47b00;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .orange-cta::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        right: -180px;
+        top: -230px;
+        border: 90px solid rgba(255, 255, 255, 0.12);
+        border-radius: 50%;
+      }
+
+      .cta-inner {
+        min-height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .cta-inner h2 {
+        font-size: 55px;
+      }
+
+      .cta-inner p {
+        max-width: 580px;
+        margin-top: 13px;
+        color: #ffe6dc;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .cta-inner .btn {
+        background: var(--dark);
+        border-color: var(--dark);
+        flex-shrink: 0;
+      }
+
+      /* =========================================================
+   WHY US
+========================================================= */
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .why-image {
+        min-height: 500px;
+        background:
+          linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
+          url("https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1100&q=88")
+            center/cover;
+      }
+
+      .why-content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .why-item {
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 24px 25px;
+      }
+
+      .why-item-number {
+        color: var(--orange);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 17px;
+        font-weight: 800;
+      }
+
+      .why-item h3 {
+        font-size: 27px;
+        margin: 10px 0 8px;
+      }
+
+      .why-item p {
+        color: var(--muted);
+        font-size: 11.5px;
+        line-height: 1.7;
+      }
+
+      /* =========================================================
+   PARTNERS
+========================================================= */
+
+      .partner-section {
+        background: var(--dark);
+        color: #fff;
+      }
+
+      .partner-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+        margin-top: 40px;
+      }
+
+      .partner {
+        min-height: 100px;
+        background: #17222b;
+        border: 1px solid #2c3841;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 21px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: 0.2s;
+      }
+
+      .partner:hover {
+        background: #fff;
+        color: var(--dark);
+      }
+
+      /* =========================================================
+   TESTIMONIALS
+========================================================= */
+
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .testimonial {
+        background: #fff;
+        border: 1px solid var(--line);
+        padding: 30px;
+      }
+
+      .stars {
+        color: var(--orange);
+        letter-spacing: 2px;
+        font-size: 13px;
+      }
+
+      .testimonial p {
+        color: #4f5b64;
+        font-size: 13px;
+        line-height: 1.8;
+        margin: 20px 0 25px;
+      }
+
+      .customer {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .customer-avatar {
+        width: 40px;
+        height: 40px;
+        background: var(--dark);
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 18px;
+      }
+
+      .customer strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 21px;
+        text-transform: uppercase;
+      }
+
+      .customer span {
+        color: var(--muted);
+        font-size: 9px;
+      }
+
+      /* =========================================================
+   BLOG
+========================================================= */
+
+      .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .blog-card {
+        background: #fff;
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+
+      .blog-image {
+        height: 220px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .blog-content {
+        padding: 25px;
+      }
+
+      .blog-meta {
+        color: var(--orange);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.4px;
+        text-transform: uppercase;
+      }
+
+      .blog-card h3 {
+        font-size: 27px;
+        margin: 10px 0;
+      }
+
+      .blog-card p {
+        color: var(--muted);
+        font-size: 11.5px;
+        line-height: 1.7;
+      }
+
+      .read-more {
+        display: inline-block;
+        margin-top: 18px;
+        color: var(--orange);
+        font-size: 9px;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+
+      /* =========================================================
+   CONTACT CTA
+========================================================= */
+
+      .contact-section {
+        background:
+          linear-gradient(90deg, rgba(8, 14, 19, 0.97), rgba(8, 14, 19, 0.82)),
+          url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1800&q=88")
+            center/cover;
+        color: #fff;
+      }
+
+      .contact-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      .contact-inner h2 {
+        font-size: 65px;
+        margin-bottom: 20px;
+      }
+
+      .contact-inner p {
+        color: #bdc7cd;
+        font-size: 13px;
+        line-height: 1.8;
+        max-width: 530px;
+      }
+
+      .contact-details {
+        margin-top: 30px;
+        display: grid;
+        gap: 13px;
+      }
+
+      .contact-detail {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+      }
+
+      .contact-icon {
+        width: 42px;
+        height: 42px;
+        border: 1px solid #3a454e;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--orange);
+      }
+
+      .contact-detail strong {
+        display: block;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      .contact-detail span {
+        display: block;
+        color: #aeb8be;
+        font-size: 10px;
+        margin-top: 2px;
+      }
+
+      .contact-box {
+        background: #fff;
+        color: var(--dark);
+        padding: 35px;
+      }
+
+      .contact-box h3 {
+        font-size: 35px;
+        margin-bottom: 22px;
+      }
+
+      .contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #d8dde0;
+        background: #f8f9fa;
+        outline: none;
+        font-size: 11px;
+      }
+
+      .contact-form input:focus,
+      .contact-form select:focus,
+      .contact-form textarea:focus {
+        border-color: #f47b00;
+      }
+
+      .contact-form textarea {
+        min-height: 115px;
+        resize: vertical;
+      }
+
+      .form-full {
+        grid-column: 1/-1;
+      }
+
+      /* =========================================================
+   FOOTER
+========================================================= */
+
+      .footer {
+        background: #070c10;
+        color: #aab5bc;
+        padding: 65px 0 22px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+      }
+
+      .footer .logo {
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .footer h3 {
+        color: #fff;
+        font-size: 23px;
+        margin-bottom: 17px;
+      }
+
+      .footer p,
+      .footer a {
+        font-size: 10.5px;
+        line-height: 1.9;
+      }
+
+      .footer a:hover {
+        color: #fff;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid #273139;
+        margin-top: 45px;
+        padding-top: 18px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        font-size: 9px;
+      }
+
+      /* =========================================================
+   MOBILE NAV
+========================================================= */
+
+      @media (max-width: 900px) {
+        .nav-links {
+          position: absolute;
+          top: 80px;
+          left: 0;
+          right: 0;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 0;
+          background: #fff;
+          border-bottom: 1px solid var(--line);
+          padding: 10px 24px 20px;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .nav-links a {
+          padding: 14px 0;
+        }
+
+        .nav-links a:not(.nav-button)::after {
+          display: none;
+        }
+
+        .nav-button {
+          text-align: center;
+          margin-top: 7px;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .stat {
+          border-bottom: 1px solid var(--line);
+        }
+
+        .about-grid,
+        .why-grid,
+        .contact-inner {
+          grid-template-columns: 1fr;
+        }
+
+        .service-grid,
+        .testimonial-grid,
+        .blog-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .partner-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        .contact-inner {
+          gap: 40px;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      /* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+      @media (max-width: 600px) {
+        .container {
+          width: calc(100% - 28px);
+        }
+
+        .topbar {
+          padding: 9px 0;
+        }
+
+        .topbar-inner {
+          display: block;
+          text-align: center;
+        }
+
+        .top-left {
+          display: none;
+        }
+
+        .top-right {
+          justify-content: center;
+          gap: 13px;
+        }
+
+        .nav-inner {
+          height: 70px;
+        }
+
+        .nav-links {
+          top: 70px;
+        }
+
+        .hero {
+          min-height: 650px;
+          background-position: 62% center;
+        }
+
+        .hero-inner {
+          min-height: 650px;
+        }
+
+        .hero h1 {
+          font-size: 61px;
+        }
+
+        .hero-description {
+          font-size: 13px;
+        }
+
+        .hero-bottom {
+          display: none;
+        }
+
+        .section {
+          padding: 70px 0;
+        }
+
+        .section-heading {
+          display: block;
+        }
+
+        .section-heading .btn {
+          margin-top: 20px;
+        }
+
+        .stats-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stat {
+          border-right: 0;
+          padding: 22px;
+        }
+
+        .about-image {
+          min-height: 380px;
+        }
+
+        .check-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .service-grid,
+        .testimonial-grid,
+        .blog-grid,
+        .partner-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .service-card {
+          min-height: 220px;
+        }
+
+        .cta-inner {
+          display: block;
+          padding: 55px 0;
+        }
+
+        .cta-inner h2 {
+          font-size: 43px;
+        }
+
+        .cta-inner .btn {
+          margin-top: 25px;
+        }
+
+        .why-image {
+          min-height: 360px;
+        }
+
+        .contact-inner h2 {
+          font-size: 52px;
+        }
+
+        .contact-form {
+          grid-template-columns: 1fr;
+        }
+
+        .form-full {
+          grid-column: auto;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .footer-bottom {
+          display: block;
+        }
+
+        .footer-bottom span {
+          display: block;
+          margin-top: 8px;
+        }
+      }
+    
+/* ===== NEW HERO — SPLIT AUTOMOTIVE SHOWCASE ===== */
+.hero{
+  position:relative;
+  min-height:690px;
+  overflow:hidden;
+  background:#f6f7f8;
+  color:#111518;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  right:-9%;
+  top:-18%;
+  width:63%;
+  height:145%;
+  background:#f47b00;
+  clip-path:polygon(25% 0,100% 0,100% 100%,0 100%);
+  z-index:0;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  left:-140px;
+  bottom:-190px;
+  width:420px;
+  height:420px;
+  border:70px solid rgba(215,25,32,.07);
+  border-radius:50%;
+}
+.hero-inner{
+  min-height:690px;
+  display:grid;
+  grid-template-columns:47% 53%;
+  align-items:center;
+  position:relative;
+  z-index:2;
+  padding-top:30px;
+  padding-bottom:90px;
+}
+.hero-content{
+  max-width:600px;
+  color:#111518;
+  position:relative;
+  z-index:5;
+}
+.hero-label{
+  color:#f47b00;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+.hero-label::before{
+  background:#f47b00;
+}
+.hero h1{
+  color:#111518;
+  font-size:clamp(64px,7vw,106px);
+  line-height:.86;
+  letter-spacing:-2px;
+  margin:19px 0 24px;
+  text-transform:uppercase;
+}
+.hero h1 span{
+  display:block;
+  color:#f47b00;
+}
+.hero-description{
+  max-width:500px;
+  color:#5f6970;
+  font-size:14px;
+  line-height:1.85;
+}
+.hero-buttons{margin-top:31px}
+.hero-buttons .btn-outline{
+  color:#111518;
+  border-color:#aeb5ba;
+}
+.hero-buttons .btn-outline:hover{
+  background:#111518;
+  border-color:#111518;
+  color:#fff;
+}
+
+/* Right visual */
+.hero-visual{
+  position:relative;
+  height:570px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:3;
+}
+.hero-photo-frame{
+  position:absolute;
+  width:min(690px,56vw);
+  height:480px;
+  right:-45px;
+  overflow:hidden;
+  background:#101418;
+  box-shadow:0 28px 65px rgba(0,0,0,.24);
+  clip-path:polygon(11% 0,100% 0,100% 88%,88% 100%,0 100%,0 12%);
+}
+.hero-photo-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,rgba(0,0,0,.20),transparent 40%,rgba(0,0,0,.08));
+}
+.hero-photo{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  transform:scale(1.03);
+  animation:heroZoom 9s ease-in-out infinite alternate;
+}
+@keyframes heroZoom{
+  from{transform:scale(1.03)}
+  to{transform:scale(1.09)}
+}
+
+/* Red technical frame + labels */
+.hero-tech-ring{
+  position:absolute;
+  width:205px;
+  height:205px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  right:28px;
+  bottom:35px;
+  z-index:4;
+  animation:heroRing 6s linear infinite;
+}
+.hero-tech-ring::before{
+  content:"";
+  position:absolute;
+  inset:17px;
+  border:1px dashed rgba(255,255,255,.30);
+  border-radius:50%;
+}
+.hero-tech-ring::after{
+  content:"360°";
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font:800 42px/1 "Barlow Condensed",sans-serif;
+  letter-spacing:1px;
+}
+@keyframes heroRing{to{transform:rotate(360deg)}}
+
+.hero-spec{
+  position:absolute;
+  z-index:6;
+  color:#fff;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:1.6px;
+  text-transform:uppercase;
+  background:#111518;
+  padding:10px 13px;
+  box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+.hero-spec.one{left:4%;top:18%}
+.hero-spec.two{right:-5%;top:31%;background:#fff;color:#111518}
+.hero-spec.three{left:12%;bottom:10%;background:#f47b00}
+.hero-spec::before{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  margin-right:7px;
+  border-radius:50%;
+  background:#f47b00;
+  vertical-align:middle;
+}
+.hero-spec.three::before{background:#fff}
+
+.hero-bottom{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:7;
+  background:#111518;
+  border-top:3px solid #f47b00;
+}
+.hero-bottom-inner{
+  min-height:74px;
+}
+.hero-feature-icon{color:#f47b00}
+.hero-feature strong{color:#fff}
+
+/* Small vertical number */
+.hero-number{
+  position:absolute;
+  left:24px;
+  top:50%;
+  transform:translateY(-50%);
+  writing-mode:vertical-rl;
+  font:800 10px/1 "Inter",sans-serif;
+  letter-spacing:4px;
+  color:#aab2b7;
+  z-index:4;
+}
+.hero-number span{color:#f47b00}
+
+@media(max-width:1000px){
+  .hero::before{
+    width:54%;
+    right:-16%;
+  }
+  .hero-inner{grid-template-columns:49% 51%}
+  .hero-photo-frame{right:-100px;width:600px}
+  .hero-spec.two{right:-12%}
+}
+@media(max-width:800px){
+  .hero{min-height:800px}
+  .hero::before{
+    width:100%;
+    height:57%;
+    top:auto;
+    bottom:0;
+    right:0;
+    clip-path:polygon(24% 0,100% 0,100% 100%,0 100%);
+  }
+  .hero-inner{
+    min-height:800px;
+    grid-template-columns:1fr;
+    align-items:start;
+    padding-top:85px;
+    padding-bottom:80px;
+  }
+  .hero-content{max-width:650px}
+  .hero h1{font-size:72px}
+  .hero-visual{
+    height:390px;
+    margin-top:5px;
+  }
+  .hero-photo-frame{
+    width:90vw;
+    max-width:650px;
+    height:330px;
+    right:-25px;
+  }
+  .hero-tech-ring{width:150px;height:150px;right:10px;bottom:8px}
+  .hero-tech-ring::after{font-size:31px}
+  .hero-spec.one{left:2%;top:8%}
+  .hero-spec.two{right:2%;top:35%}
+  .hero-spec.three{left:5%;bottom:0}
+  .hero-number{display:none}
+}
+@media(max-width:600px){
+  .hero{min-height:760px}
+  .hero-inner{min-height:760px;padding-top:62px}
+  .hero h1{font-size:57px;letter-spacing:-1px}
+  .hero-description{font-size:13px}
+  .hero-buttons{gap:8px}
+  .hero-buttons .btn{padding:0 16px}
+  .hero-visual{height:300px}
+  .hero-photo-frame{
+    height:255px;
+    width:104vw;
+    right:-38px;
+  }
+  .hero-tech-ring{width:110px;height:110px;right:8px;bottom:0}
+  .hero-tech-ring::before{inset:10px}
+  .hero-tech-ring::after{font-size:24px}
+  .hero-spec{font-size:7px;padding:8px 9px}
+  .hero-spec.one{top:5%;left:0}
+  .hero-spec.two{right:0;top:28%}
+  .hero-spec.three{left:2%;bottom:-2px}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-photo,.hero-tech-ring{animation:none!important}
+}
+
+/* =========================================================
+   FINAL THEME — WHITE / RED / CHARCOAL
+   ========================================================= */
+:root{
+  --orange:#f47b00;
+  --orange-dark:#c85f00;
+  --black:#090b0d;
+  --dark:#111518;
+  --dark2:#1b2024;
+  --white:#fff;
+  --light:#f6f7f8;
+  --line:#dfe3e6;
+  --muted:#68727a;
+}
+
+/* More white space/background throughout */
+body{background:#f7f8f9;color:#111518}
+.services-section{background:#f3f4f5}
+.stats{background:#fff}
+.about-image,.why-image,.blog-image,.contact-section{background-color:#111}
+
+/* Keep dark only where it creates contrast */
+.vehicle-showcase,
+.contact-section,
+.footer{color:#fff}
+
+/* Red instead of orange everywhere */
+.btn{background:#f47b00;border-color:#f47b00}
+.btn:hover{background:#c85f00;border-color:#c85f00}
+.btn-outline:hover{background:#fff;color:#111;border-color:#fff}
+.kicker,.service-number,.service-link,.stars,.contact-icon{color:#f47b00}
+.kicker:before,.hero-label:before{background:#f47b00}
+.hero h1 span{color:#e21a22}
+.partner-section{background:#fff;color:#111518}
+.partner-section .section-intro{color:#68727a}
+.partner{background:#fff;border:1px solid #d9dde0;color:#252a2e}
+.partner:hover{background:#111518;color:#fff;border-color:#111518}
+
+/* Cleaner white cards */
+.check,.testimonial,.blog-card,.why-item,.contact-box{background:#fff}
+
+/* =========================================================
+   CLIENT / PARTNER GRID — inspired by supplied reference
+   ========================================================= */
+.client-section{
+  position:relative;
+  padding:110px 0 120px;
+  background:#fff;
+  overflow:hidden;
+}
+.client-section:before{
+  content:"CLIENTS";
+  position:absolute;
+  right:-15px;
+  top:35px;
+  font:900 clamp(100px,16vw,230px)/.75 "Barlow Condensed",sans-serif;
+  letter-spacing:-4px;
+  color:#f3f4f5;
+  pointer-events:none;
+}
+.client-top{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:40px;
+  margin-bottom:55px;
+}
+.client-heading{max-width:720px}
+.client-tab{
+  display:inline-block;
+  padding:10px 28px 11px;
+  background:#f47b00;
+  color:#fff;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.4px;
+  text-transform:uppercase;
+  transform:skew(-10deg);
+  margin-bottom:22px;
+}
+.client-tab span{display:inline-block;transform:skew(10deg)}
+.client-heading h2{
+  color:#101418;
+  font-size:clamp(52px,6vw,82px);
+  line-height:.88;
+  letter-spacing:-1.5px;
+  max-width:720px;
+}
+.client-heading h2 em{
+  color:#f47b00;
+  font-style:normal;
+}
+.client-more{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  background:#f47b00;
+  color:#fff;
+  min-height:60px;
+  padding-left:28px;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  flex-shrink:0;
+  transition:.25s ease;
+}
+.client-more:hover{background:#111518;transform:translateY(-3px)}
+.client-more .arrow{
+  width:52px;height:52px;margin-right:6px;
+  display:grid;place-items:center;
+  background:#111518;
+  font-size:25px;
+}
+.client-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-top:1px solid #d7dadd;
+  border-left:1px solid #d7dadd;
+}
+.client-card{
+  min-height:155px;
+  padding:30px;
+  border-right:1px solid #d7dadd;
+  border-bottom:1px solid #d7dadd;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  transition:.35s cubic-bezier(.22,.61,.36,1);
+}
+.client-card:before{
+  content:"";
+  position:absolute;
+  width:0;height:0;
+  right:-35px;bottom:-35px;
+  background:#f47b00;
+  border-radius:50%;
+  transition:.45s ease;
+}
+.client-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 45px rgba(17,21,24,.10);
+  z-index:3;
+}
+.client-card:hover:before{width:100px;height:100px}
+.client-logo{
+  position:relative;
+  z-index:1;
+  color:#62696f;
+  font-family:"Barlow Condensed",sans-serif;
+  font-weight:800;
+  letter-spacing:-.5px;
+  line-height:.9;
+  transition:.3s ease;
+}
+.client-card:hover .client-logo{color:#111518;transform:scale(1.04)}
+.client-logo .symbol{
+  display:inline-block;
+  font-size:31px;
+  margin-right:8px;
+  vertical-align:middle;
+}
+.client-logo .brand{font-size:30px;vertical-align:middle}
+.client-logo small{
+  display:block;
+  margin-top:8px;
+  font:700 8px/1 "Inter",sans-serif;
+  letter-spacing:1.8px;
+}
+.client-logo.pentair .symbol{font-size:34px}
+.client-logo.chiyoda .symbol{font-size:36px}
+.client-logo.sumco .brand{font-size:34px}
+.client-logo.yokohama .symbol{font-size:30px}
+.client-logo.national .brand{font-size:24px}
+.client-logo.calsonic .brand{font-size:21px}
+.client-logo.nhcar .brand{font-size:31px}
+.client-logo.care .brand{font-size:23px;font-style:italic}
+
+@media(max-width:900px){
+  .client-top{align-items:flex-start;flex-direction:column}
+  .client-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .client-section{padding:75px 0}
+  .client-heading h2{font-size:49px}
+  .client-more{width:100%;justify-content:space-between}
+  .client-grid{grid-template-columns:1fr}
+  .client-card{min-height:125px}
+}
+
+/* White sections should dominate page rhythm */
+.section{background:#f7f8f9}
+.about-grid + *{}
+
+    
+/* =========================================================
+   VISIBILITY FIX — restore contrast for dark feature sections
+   ========================================================= */
+
+/* The generic .section background was overriding these sections. */
+.vehicle-showcase{
+  background:#101518 !important;
+  color:#fff !important;
+}
+.vehicle-showcase .showcase-head h2,
+.vehicle-showcase .showcase-head p{
+  color:#fff;
+}
+.vehicle-showcase .showcase-head p{
+  color:#aeb8be;
+}
+.vehicle-showcase .kicker{
+  color:#f47b00;
+}
+
+/* Contact CTA must retain its photographic/dark background. */
+.section.contact-section{
+  background:
+    linear-gradient(90deg, rgba(8,14,19,.97), rgba(8,14,19,.82)),
+    url("https://images.unsplash.com/photo-1486006920555-c77dcf18193c?auto=format&fit=crop&w=1800&q=88")
+    center/cover no-repeat !important;
+  color:#fff !important;
+}
+.section.contact-section .kicker{
+  color:#f47b00;
+}
+.section.contact-section h2{
+  color:#fff;
+}
+.section.contact-section p{
+  color:#bdc7cd;
+}
+.section.contact-section .contact-detail strong{
+  color:#fff;
+}
+.section.contact-section .contact-detail span{
+  color:#bdc7cd;
+}
+
+/* Keep all normal white sections readable. */
+.section:not(.contact-section){
+  color:#111518;
+}
+.section:not(.contact-section) h2,
+.section:not(.contact-section) h3{
+  color:#111518;
+}
+.section:not(.contact-section) p{
+  color:#68727a;
+}
+
+/* About/why content that sits on white should never inherit white text. */
+.about-grid h2,
+.why-grid h2,
+.blog-grid h2{
+  color:#111518;
+}
+
+/* Client section remains intentionally white. */
+.client-section{
+  color:#111518;
+}
+.client-section h2{
+  color:#111518;
+}
+
+    
+/* =========================================================
+   FINAL VISUAL SYSTEM — LIGHT / RED / REALISTIC SCROLL
+   ========================================================= */
+:root{
+  --orange:#f47b00;
+  --orange-dark:#c85f00;
+  --ink:#101418;
+  --ink-soft:#3f484f;
+  --paper:#ffffff;
+  --paper-2:#f4f5f6;
+  --line:#dfe3e6;
+}
+
+/* White/light page is intentional. */
+body{
+  background:#f6f7f8 !important;
+  color:var(--ink) !important;
+}
+
+/* Never use white text on light generic sections. */
+.section:not(.dark):not(.contact-section),
+.section:not(.dark):not(.contact-section) h1,
+.section:not(.dark):not(.contact-section) h2,
+.section:not(.dark):not(.contact-section) h3,
+.section:not(.dark):not(.contact-section) h4{
+  color:var(--ink);
+}
+.section:not(.dark):not(.contact-section) p{
+  color:#657078;
+}
+
+/* Vehicle showcase from the previous version: make it LIGHT. */
+.vehicle-showcase{
+  background:#f6f7f8 !important;
+  color:var(--ink) !important;
+}
+.vehicle-showcase .showcase-head h2{color:var(--ink) !important}
+.vehicle-showcase .showcase-head p{color:#657078 !important}
+.vehicle-showcase:before{color:rgba(16,20,24,.035) !important}
+
+/* Contact section: white editorial layout, not a black block. */
+.section.contact-section{
+  background:#f6f7f8 !important;
+  color:var(--ink) !important;
+}
+.contact-section .contact-inner h2{color:var(--ink) !important}
+.contact-section .contact-inner p{color:#657078 !important}
+.contact-section .contact-detail strong{color:var(--ink) !important}
+.contact-section .contact-detail span{color:#657078 !important}
+.contact-section .contact-icon{
+  border-color:#cfd5d9 !important;
+  color:var(--orange) !important;
+}
+
+/* Existing dark sections are kept only where deliberately used. */
+.section.dark{background:#111518 !important;color:#fff !important}
+.section.dark h2,.section.dark h3,.section.dark p{color:#fff}
+.section.dark .section-intro{color:#bdc6cb}
+
+/* Red accents */
+.kicker,.service-number,.service-link,.stars,.contact-icon{color:var(--orange) !important}
+.kicker:before,.hero-label:before{background:var(--orange) !important}
+.btn,.nav-button{background:var(--orange) !important;border-color:var(--orange) !important}
+.btn:hover,.nav-button:hover{background:var(--orange-dark) !important;border-color:var(--orange-dark) !important}
+
+/* =========================================================
+   LIVE SCROLL STORY — image panels reveal as user scrolls
+   ========================================================= */
+.motion-story{
+  position:relative;
+  background:#fff;
+  overflow:hidden;
+  padding:0;
+}
+.motion-story-head{
+  position:relative;
+  z-index:2;
+  padding:105px 0 55px;
+}
+.motion-story-head .kicker{margin-bottom:16px}
+.motion-story-head h2{
+  max-width:900px;
+  font-size:clamp(48px,6vw,84px);
+  line-height:.88;
+}
+.motion-story-head h2 span{color:var(--orange)}
+
+.motion-scene{
+  position:relative;
+  min-height:670px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:70px;
+  padding:80px 0;
+}
+.motion-scene + .motion-scene{
+  border-top:1px solid #e5e8ea;
+}
+.motion-scene:nth-child(even){
+  background:#f6f7f8;
+}
+.motion-copy{
+  position:relative;
+  z-index:3;
+}
+.motion-copy .scene-no{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--orange);
+  font:800 12px/1 "Barlow Condensed",sans-serif;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:20px;
+}
+.scene-no::before{
+  content:"";
+  width:32px;
+  height:2px;
+  background:var(--orange);
+}
+.motion-copy h3{
+  font-size:clamp(46px,5vw,72px);
+  line-height:.88;
+  margin-bottom:18px;
+}
+.motion-copy p{
+  max-width:490px;
+  color:#657078;
+  font-size:13px;
+  line-height:1.9;
+}
+.motion-points{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+  max-width:480px;
+  margin-top:25px;
+}
+.motion-point{
+  padding:13px 15px;
+  background:#fff;
+  border:1px solid #dfe3e6;
+  font-size:10px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.7px;
+}
+.motion-point::before{
+  content:"✓";
+  color:var(--orange);
+  margin-right:7px;
+}
+
+.motion-media{
+  position:relative;
+  height:490px;
+  z-index:2;
+}
+.motion-image-wrap{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:#dfe3e6;
+  box-shadow:0 30px 70px rgba(16,20,24,.14);
+}
+.motion-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.16);
+  opacity:.01;
+  transition:transform 1.5s cubic-bezier(.16,1,.3,1),opacity 1.1s ease;
+  will-change:transform,opacity;
+}
+.motion-scene.is-visible .motion-image{
+  transform:scale(1);
+  opacity:1;
+}
+
+/* Directional clip reveal makes images feel like they are entering the page. */
+.motion-scene.from-left .motion-image-wrap{
+  clip-path:inset(0 100% 0 0);
+  transition:clip-path 1.1s cubic-bezier(.16,1,.3,1);
+}
+.motion-scene.from-left.is-visible .motion-image-wrap{
+  clip-path:inset(0 0 0 0);
+}
+.motion-scene.from-right .motion-image-wrap{
+  clip-path:inset(0 0 0 100%);
+  transition:clip-path 1.1s cubic-bezier(.16,1,.3,1);
+}
+.motion-scene.from-right.is-visible .motion-image-wrap{
+  clip-path:inset(0 0 0 0);
+}
+
+/* Moving red edge + measurement details */
+.motion-media::before{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  border-left:2px solid var(--orange);
+  border-top:2px solid var(--orange);
+  left:-18px;
+  top:-18px;
+  z-index:4;
+  transition:transform 1s .25s ease;
+}
+.motion-scene.is-visible .motion-media::before{
+  transform:translate(12px,12px);
+}
+.motion-media::after{
+  content:"LIVE VEHICLE VIEW";
+  position:absolute;
+  right:-18px;
+  bottom:24px;
+  padding:10px 14px;
+  background:var(--ink);
+  color:#fff;
+  font:800 8px/1 "Inter",sans-serif;
+  letter-spacing:2px;
+  z-index:5;
+}
+
+/* Scroll-driven car silhouette / road line */
+.motion-road{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:#dfe3e6;
+}
+.motion-road::after{
+  content:"";
+  position:absolute;
+  width:22%;
+  height:3px;
+  background:var(--orange);
+  left:0;
+  top:-1px;
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform 1.4s .15s ease;
+}
+.motion-scene.is-visible .motion-road::after{transform:scaleX(1)}
+
+/* =========================================================
+   CAR IMAGE STRIP — realistic depth / hover movement
+   ========================================================= */
+.image-rail{
+  background:#111518;
+  padding:85px 0;
+  overflow:hidden;
+  position:relative;
+}
+.image-rail-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:34px;
+}
+.image-rail-head h2{color:#fff;font-size:clamp(46px,5vw,70px)}
+.image-rail-head p{color:#aeb8be;max-width:420px;font-size:12px;line-height:1.8}
+.image-rail-track{
+  display:flex;
+  gap:14px;
+  width:max-content;
+  transform:translateX(0);
+  will-change:transform;
+}
+.rail-card{
+  width:340px;
+  height:230px;
+  flex:none;
+  overflow:hidden;
+  position:relative;
+  background:#20262b;
+}
+.rail-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .8s cubic-bezier(.16,1,.3,1);
+}
+.rail-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(transparent 45%,rgba(0,0,0,.7));
+}
+.rail-card:hover img{transform:scale(1.1)}
+.rail-caption{
+  position:absolute;
+  left:18px;
+  bottom:16px;
+  z-index:2;
+  color:#fff;
+  font:800 20px/1 "Barlow Condensed",sans-serif;
+  text-transform:uppercase;
+}
+.rail-caption small{
+  display:block;
+  color:#ff8589;
+  font:800 8px/1 "Inter",sans-serif;
+  letter-spacing:1.7px;
+  margin-bottom:6px;
+}
+
+
+/* =========================================================
+   FINAL IMAGE RAIL — TRUE SCROLL-THROUGH HORIZONTAL RAIL
+   ========================================================= */
+.image-rail{
+  position:relative !important;
+  overflow:visible !important;
+  background:#111518 !important;
+  padding:85px 0 0 !important;
+}
+.image-rail-track{
+  position:sticky !important;
+  top:calc(50vh - 115px) !important;
+  left:0;
+  display:flex !important;
+  gap:14px !important;
+  width:max-content !important;
+  transform:translate3d(0,0,0);
+  will-change:transform;
+  padding-bottom:85px;
+}
+.rail-card{
+  width:340px !important;
+  height:230px !important;
+  flex:0 0 340px !important;
+}
+@media(max-width:600px){
+  .image-rail{padding-top:65px !important}
+  .image-rail-track{
+    top:calc(50vh - 95px) !important;
+    padding-bottom:65px;
+  }
+  .rail-card{width:280px !important;height:190px !important;flex-basis:280px !important}
+}
+
+/* =========================================================
+   MORE NATURAL SECTION ENTRANCE MOTION
+   ========================================================= */
+.reveal,
+.reveal-left,
+.reveal-right{
+  will-change:transform,opacity;
+}
+.reveal-left{opacity:0;transform:translateX(-65px);transition:opacity .9s ease,transform 1s cubic-bezier(.16,1,.3,1)}
+.reveal-right{opacity:0;transform:translateX(65px);transition:opacity .9s ease,transform 1s cubic-bezier(.16,1,.3,1)}
+.reveal-left.is-visible,.reveal-right.is-visible{opacity:1;transform:none}
+
+@media(max-width:850px){
+  .motion-scene{
+    grid-template-columns:1fr;
+    min-height:auto;
+    gap:45px;
+    padding:75px 0;
+  }
+  .motion-media{height:390px}
+  .image-rail-head{display:block}
+  .image-rail-head p{margin-top:14px}
+}
+@media(max-width:600px){
+  .motion-story-head{padding:75px 0 35px}
+  .motion-copy h3{font-size:52px}
+  .motion-points{grid-template-columns:1fr}
+  .motion-media{height:290px}
+  .rail-card{width:280px;height:190px}
+}
+@media(prefers-reduced-motion:reduce){
+}
+
+    
+/* =========================================================
+   CLEAN HERO — ONE CAR IMAGE ONLY
+   ========================================================= */
+.hero{
+  min-height:650px !important;
+  background:#f7f8f9 !important;
+  color:#111518 !important;
+  overflow:hidden;
+}
+.hero::after{display:none !important}
+.hero-inner{
+  min-height:650px !important;
+  display:grid !important;
+  grid-template-columns:46% 54% !important;
+  align-items:center !important;
+  gap:25px !important;
+  padding-top:0 !important;
+  padding-bottom:0 !important;
+}
+.hero-content{
+  max-width:590px !important;
+  color:#111518 !important;
+  z-index:3 !important;
+}
+.hero h1{
+  color:#111518 !important;
+  font-size:clamp(66px,7vw,105px) !important;
+  line-height:.84 !important;
+  letter-spacing:-2.2px !important;
+  margin:0 0 24px !important;
+}
+.hero h1 span{color:#111518 !important}
+.hero-description{color:#657078 !important}
+.hero-buttons .btn-outline{color:#111518 !important;border-color:#b8bec2 !important}
+.hero-buttons .btn-outline:hover{color:#fff !important;background:#111518 !important;border-color:#111518 !important}
+.hero-visual{
+  position:relative !important;
+  height:650px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:flex-end !important;
+  z-index:2 !important;
+}
+.hero-photo-frame{
+  position:relative !important;
+  width:100% !important;
+  max-width:720px !important;
+  height:500px !important;
+  right:auto !important;
+  overflow:hidden !important;
+  background:#e9ecef !important;
+  box-shadow:0 30px 70px rgba(17,21,24,.16) !important;
+  clip-path:none !important;
+  border-radius:0 !important;
+}
+.hero-photo-frame::after{display:none !important}
+.hero-photo{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  object-position:center !important;
+  transform:scale(1.02) !important;
+  animation:cleanCarZoom 10s ease-in-out infinite alternate !important;
+}
+@keyframes cleanCarZoom{
+  from{transform:scale(1.02)}
+  to{transform:scale(1.06)}
+}
+.hero-tech-ring,.hero-spec,.hero-number,.hero-bottom{display:none !important}
+@media(max-width:800px){
+  .hero{min-height:auto !important}
+  .hero-inner{
+    min-height:auto !important;
+    grid-template-columns:1fr !important;
+    padding:75px 0 70px !important;
+  }
+  .hero-content{max-width:700px !important}
+  .hero h1{font-size:68px !important}
+  .hero-visual{height:380px !important;justify-content:center !important}
+  .hero-photo-frame{width:100% !important;height:350px !important}
+}
+@media(max-width:600px){
+  .hero-inner{padding:58px 0 55px !important}
+  .hero h1{font-size:56px !important}
+  .hero-visual{height:285px !important}
+  .hero-photo-frame{height:255px !important}
+}
+
+/* =========================================================
+   ABOUT — REAL WORKSHOP IMAGE, NO BLACK CARD
+   ========================================================= */
+.about-image{
+  min-height:540px !important;
+  position:relative !important;
+  overflow:hidden !important;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.12)),
+    url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=95")
+    center center/cover no-repeat !important;
+  box-shadow:0 25px 55px rgba(16,20,24,.13) !important;
+}
+.about-image::before{display:none !important}
+.about-badge{display:none !important}
+@media(max-width:800px){.about-image{min-height:390px !important}}
+
+    
+/* ===== NAV APPOINTMENT ALIGNMENT FIX ===== */
+.nav-inner{
+  display:grid !important;
+  grid-template-columns:auto minmax(0,1fr) auto !important;
+  align-items:center !important;
+  gap:28px !important;
+}
+.logo{align-self:center}
+.nav-links{
+  display:flex;
+  align-items:center !important;
+  justify-content:center !important;
+  height:80px;
+}
+.nav-links a:not(.nav-button){
+  display:flex;
+  align-items:center;
+  height:80px;
+  padding:0 !important;
+}
+.nav-links a:not(.nav-button)::after{
+  bottom:20px !important;
+}
+.nav-button{
+  position:static !important;
+  transform:none !important;
+  justify-self:end;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:48px;
+  height:48px;
+  margin:0 !important;
+  white-space:nowrap;
+}
+.mobile-menu{
+  align-self:center;
+}
+
+@media(max-width:900px){
+  .nav-inner{
+    display:flex !important;
+    height:80px;
+  }
+  .nav-links{
+    height:auto;
+  }
+  .nav-links a:not(.nav-button){
+    height:auto;
+  }
+  .nav-button{
+    position:static !important;
+    transform:none !important;
+    width:auto;
+  }
+}
+@media(max-width:600px){
+  .nav-inner{height:70px}
+}
+
+
+/* ===== VINFAST FEATURE — CLEAN WHITE EDITORIAL SECTION ===== */
+.vinfast-section{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  color:#101418;
+  padding:100px 0;
+  border-top:1px solid #e5e8ea;
+  border-bottom:1px solid #e5e8ea;
+}
+.vinfast-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 86% 22%,rgba(244,123,0,.075),transparent 24%),
+    linear-gradient(115deg,rgba(16,20,24,.035) 1px,transparent 1px);
+  background-size:auto,80px 80px;
+  pointer-events:none;
+}
+.vinfast-inner{
+  width:min(1200px,88%);
+  margin:auto;
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.vinfast-copy{max-width:610px}
+.vinfast-kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#f47b00;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+  margin-bottom:18px;
+}
+.vinfast-kicker:before{
+  content:"";
+  width:38px;
+  height:2px;
+  background:#f47b00;
+}
+.vinfast-copy h2{
+  margin:0;
+  color:#101418;
+  font-family:"Barlow Condensed",Arial,sans-serif;
+  font-size:clamp(52px,6vw,78px);
+  line-height:.88;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+}
+.vinfast-copy h2 span{color:#f47b00}
+.vinfast-intro{
+  margin:27px 0 0;
+  color:#3f484f;
+  font-size:16px;
+  line-height:1.75;
+  max-width:580px;
+}
+.vinfast-text{
+  margin:15px 0 0;
+  color:#68727a;
+  font-size:13px;
+  line-height:1.8;
+  max-width:570px;
+}
+.vinfast-text strong{color:#101418}
+.vinfast-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:32px;
+  border:1px solid #dfe3e6;
+  background:#fff;
+}
+.vf-stat{
+  min-height:96px;
+  padding:18px;
+  background:#f7f8f9;
+  border-right:1px solid #dfe3e6;
+}
+.vf-stat:last-child{border-right:0}
+.vf-stat strong{
+  display:block;
+  font:800 28px/1 "Barlow Condensed";
+  color:#101418;
+  text-transform:uppercase;
+}
+.vf-stat span{
+  display:block;
+  margin-top:7px;
+  color:#68727a;
+  font-size:9px;
+  line-height:1.4;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.vinfast-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  margin-top:29px;
+}
+.vinfast-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  min-height:51px;
+  padding:0 22px;
+  background:#f47b00;
+  color:#fff;
+  font:800 18px/1 "Barlow Condensed";
+  text-transform:uppercase;
+  transition:.3s ease;
+}
+.vinfast-button span{font-size:20px}
+.vinfast-button:hover{
+  background:#101418;
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(16,20,24,.14);
+}
+.vinfast-secondary{
+  color:#101418;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  border-bottom:1px solid #aeb5ba;
+  padding-bottom:5px;
+  transition:.25s;
+}
+.vinfast-secondary:hover{
+  color:#f47b00;
+  border-color:#f47b00;
+}
+.vinfast-visual{
+  min-height:485px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.vinfast-image-wrap{
+  border:0;
+  outline:0;
+  width:100%;
+  height:430px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:none;
+  position:relative;
+}
+.vinfast-image-wrap img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  transition:transform 1s cubic-bezier(.2,.7,.2,1);
+}
+.vinfast-visual:hover .vinfast-image-wrap img{transform:scale(1.045)}
+.vinfast-floating-card{
+  display:none !important;
+}
+.vinfast-outline{
+  position:absolute;
+  right:-5px;
+  top:0;
+  color:rgba(16,20,24,.035);
+  font:900 150px/.8 "Barlow Condensed";
+  pointer-events:none;
+}
+@media(max-width:850px){
+  .vinfast-inner{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+  .vinfast-copy{max-width:none}
+  .vinfast-visual{min-height:400px}
+  .vinfast-image-wrap{height:390px}
+}
+@media(max-width:600px){
+  .vinfast-section{padding:70px 0}
+  .vinfast-stats{grid-template-columns:1fr}
+  .vf-stat{border-right:0;border-bottom:1px solid #dfe3e6}
+  .vf-stat:last-child{border-bottom:0}
+  .vinfast-visual{min-height:330px}
+  .vinfast-image-wrap{height:285px}
+  .vinfast-actions{align-items:flex-start;flex-direction:column}
+}
+
+</style>
+  
+<style id="image-rail-arrow-controls">
+  .image-rail{position:relative;}
+
+  .rail-controls{
+    width:min(1240px,calc(100% - 48px));
+    margin:0 auto 24px;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+    position:relative;
+    z-index:20;
+  }
+
+  .rail-arrow{
+    width:52px;
+    height:52px;
+    border:1px solid #596168;
+    background:#111518;
+    color:#fff;
+    display:grid;
+    place-items:center;
+    font-family:Arial,sans-serif;
+    font-size:25px;
+    line-height:1;
+    cursor:pointer;
+    transition:.25s ease;
+  }
+
+  .rail-arrow:hover{
+    background:#f47b00;
+    border-color:#f47b00;
+    transform:translateY(-2px);
+  }
+
+  .rail-arrow:active{transform:translateY(0) scale(.97);}
+
+  .rail-arrow:disabled{
+    opacity:.35;
+    cursor:not-allowed;
+    transform:none;
+  }
+
+  .image-rail-track{
+    transition:transform .45s cubic-bezier(.22,.61,.36,1);
+  }
+
+  @media(max-width:600px){
+    .rail-controls{
+      width:calc(100% - 28px);
+      margin-bottom:18px;
+    }
+    .rail-arrow{
+      width:46px;
+      height:46px;
+      font-size:22px;
+    }
+  }
+</style>
+
+
+<!-- Interactive 3D car viewer -->
+
+<style id="unico-home-logo-sizing">
+.unico-logo-image{width:100%;max-width:255px;height:auto;object-fit:contain;}
+.logo img{max-height:62px;}
+.footer-logo{display:block;}
+.footer-logo img{width:230px;max-width:100%;height:auto;}
+.footer-brand-logo img{width:230px;max-width:100%;height:auto;}
+</style>
+
+<style id="unico-service-images">
+.service-card .service-image{width:100%;height:150px;object-fit:cover;display:block;margin:-38px -34px 24px;width:calc(100% + 68px);filter:saturate(.95);transition:transform .35s ease;}
+.service-card:hover .service-image{transform:scale(1.035);}
+@media(max-width:900px){.service-card .service-image{height:165px;}}
+.home-service-image{width:100%;height:155px;object-fit:cover;display:block;margin:-28px -28px 22px;width:calc(100% + 56px);transition:transform .35s ease;}
+.service-card:hover .home-service-image{transform:scale(1.035);}
+@media(max-width:900px){.home-service-image{height:150px;}}
+</style>
+<style id="unico-home-service-images">
+.home-service-image{width:calc(100% + 56px);height:155px;margin:-28px -28px 22px;object-fit:cover;display:block;transition:transform .35s ease;}
+.service-card:hover .home-service-image{transform:scale(1.035);}
+@media(max-width:900px){.home-service-image{height:150px;}}
+</style>
+
+<style id="unico-page-transition-css">
+html.unico-transition-lock,html.unico-transition-lock body{overflow:hidden!important}
+#unicoPageTransition{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,rgba(255,111,0,.10),transparent 34%),#0b0b0c;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .42s ease,visibility .42s ease}
+#unicoPageTransition.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.unico-loader-stage{position:relative;width:min(760px,88vw);height:190px;overflow:hidden}
+.unico-loader-road{position:absolute;left:0;right:0;bottom:38px;height:2px;background:rgba(255,255,255,.16)}
+.unico-loader-road:after{content:"";position:absolute;left:0;right:0;top:13px;height:1px;background:repeating-linear-gradient(90deg,rgba(255,111,0,0) 0 34px,rgba(255,111,0,.45) 34px 66px);animation:unicoRoad 1.05s linear infinite}
+.unico-loader-car{position:absolute;left:-190px;bottom:44px;width:170px;height:86px;filter:drop-shadow(0 13px 13px rgba(0,0,0,.55));animation:unicoDrive 1.15s cubic-bezier(.55,.05,.22,1) forwards}
+.unico-car-body{position:absolute;left:14px;bottom:17px;width:137px;height:39px;background:linear-gradient(135deg,#ff8a2a 0%,#ff5a00 55%,#d93400 100%);border-radius:18px 29px 10px 9px;box-shadow:inset -10px -7px 0 rgba(0,0,0,.12),inset 8px 5px 0 rgba(255,255,255,.12)}
+.unico-car-body:before{content:"";position:absolute;left:34px;top:-25px;width:69px;height:32px;background:linear-gradient(135deg,#24272a,#111315);clip-path:polygon(20% 100%,35% 0,73% 0,100% 100%);border-radius:10px 10px 2px 2px;box-shadow:inset 0 2px 0 rgba(255,255,255,.18)}
+.unico-car-window{position:absolute;left:43px;top:-20px;width:54px;height:20px;background:linear-gradient(135deg,rgba(210,235,245,.65),rgba(55,72,80,.92));clip-path:polygon(18% 100%,31% 5%,67% 5%,92% 100%);border-top:1px solid rgba(255,255,255,.45)}
+.unico-car-bumper{position:absolute;right:-3px;bottom:22px;width:18px;height:9px;border-radius:0 7px 7px 0;background:#151515}
+.unico-car-light{position:absolute;right:10px;top:13px;width:9px;height:8px;border-radius:50%;background:#fff2cf;box-shadow:0 0 14px 5px rgba(255,196,84,.35)}
+.unico-car-wheel{position:absolute;bottom:0;width:30px;height:30px;border-radius:50%;background:#101112;border:5px solid #2a2b2d;box-shadow:inset 0 0 0 4px #090a0b;animation:unicoWheel .27s linear infinite}
+.unico-car-wheel:after{content:"";position:absolute;inset:7px;border-radius:50%;background:#aeb2b5;box-shadow:0 0 0 2px #56595c}
+.unico-car-wheel.left{left:31px}.unico-car-wheel.right{right:18px}
+.unico-loader-label{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.64);white-space:nowrap}
+.unico-loader-label span{color:#ff6b00}
+@keyframes unicoDrive{0%{transform:translateX(0) scale(.92);opacity:0}8%{opacity:1}72%{transform:translateX(calc(50vw + 30px)) scale(1);opacity:1}100%{transform:translateX(calc(100vw + 250px)) scale(1.02);opacity:1}}
+@keyframes unicoWheel{to{transform:rotate(360deg)}}
+@keyframes unicoRoad{to{background-position:-66px 0}}
+@media(max-width:600px){.unico-loader-stage{height:160px}.unico-loader-car{transform:scale(.78);transform-origin:left bottom}.unico-loader-label{font-size:9px;letter-spacing:2px}}
+@media(prefers-reduced-motion:reduce){.unico-loader-car{animation-duration:.45s}.unico-loader-road:after,.unico-car-wheel{animation:none}}
+</style>
+
+</head>
+
+  <body>
+
+<div id="unicoPageTransition" aria-hidden="false">
+  <div class="unico-loader-stage">
+    <div class="unico-loader-road"></div>
+    <div class="unico-loader-car" aria-hidden="true">
+      <div class="unico-car-body">
+        <div class="unico-car-window"></div>
+        <div class="unico-car-light"></div>
+        <div class="unico-car-bumper"></div>
+      </div>
+      <div class="unico-car-wheel left"></div>
+      <div class="unico-car-wheel right"></div>
+    </div>
+    <div class="unico-loader-label">UNICO <span>MOTORS</span></div>
+  </div>
+</div>
+
+    <!-- =======================================================
+     TOP BAR
+======================================================= -->
+
+    <div class="topbar">
+      <div class="container topbar-inner">
+        <div class="top-left">
+          UNICO MOTORS · RELIABLE AUTOMOTIVE SERVICE PARTNER
+        </div>
+
+        <div class="top-right">
+          <a href="mailto:info@unicomotors.com"> info@unicomotors.com </a>
+
+          <a href="tel:18008892021"> 1800 889 2021 </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================
+     NAVIGATION
+======================================================= -->
+
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo" aria-label="Unico Motors">
+          <img class="unico-logo-image" src="assets/unico-home-logo.png" alt="Unico Motors" /></a>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="vinfast.html" class="nav-vinfast" aria-label="VinFast">VINFAST <span>EV</span></a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <a href="contact.html" class="nav-button">Book Appointment</a>
+        <button class="mobile-menu" id="mobileMenu" aria-label="Open menu">☰</button>
+      </div>
+    </header>
+
+    <!-- =======================================================
+     HERO
+======================================================= -->
+
+    
+<section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content reveal">
+          <h1>
+            Drive In.<br>
+            Drive Better.
+          </h1>
+
+          <p class="hero-description">
+            Expert automotive care, advanced diagnostics and dependable repairs —
+            engineered around your vehicle and built for the road ahead.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="contact.html" class="btn">Book An Appointment</a>
+            <a href="services.html" class="btn btn-outline">Explore Services</a>
+          </div>
+        </div>
+
+        <div class="hero-visual hero-3d-visual">
+          <div class="hero-3d-stage" id="hero3DStage">
+            <div class="hero-car-interactive" id="heroCarInteractive" aria-label="Interactive 3D super car">
+              <img
+                id="heroCarModel"
+                class="hero-car-model hero-car-image-new"
+                src="https://www.v3cars.com/cdn-cgi/image/width=1920%2Cquality=75%2Cformat=auto/https://assets.v3cars.com/media/model-imgs/745023vinfast-vf-mpv-7.webp"
+                alt="VinFast VF MPV 7"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+     STATS
+======================================================= -->
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat">
+          <div class="stat-number">95%</div>
+
+          <div class="stat-label">Customer Satisfaction</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">24/7</div>
+
+          <div class="stat-label">Quality Service</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">360°</div>
+
+          <div class="stat-label">Complete Vehicle Care</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-number">01</div>
+
+          <div class="stat-label">Trusted Automotive Partner</div>
+        </div>
+      </div>
+    </section>
+</div>
+
+    <!-- =======================================================
+     ABOUT SECTION
+======================================================= -->
+
+    <section class="section reveal">
+      <div class="container about-grid">
+        <div class="about-image" aria-label="Unico Motors automotive workshop"></div>
+
+        <div class="about-content">
+          <div class="kicker">About Us</div>
+
+          <h2>Your Trusted Partner For Reliable Auto Repair</h2>
+
+          <p class="section-intro">
+            Experience top-notch auto repair and maintenance with trusted
+            expertise, quality service and customer satisfaction at the heart of
+            everything we do.
+          </p>
+
+          <div class="check-grid">
+            <div class="check">Expert Technicians</div>
+
+            <div class="check">Quality Assurance</div>
+
+            <div class="check">Quick Turnaround</div>
+
+            <div class="check">24/7 Quality Service</div>
+          </div>
+
+          <a href="about.html" class="btn"> Know About Us </a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="motion-story" id="vehicle-story">
+
+      <div class="motion-scene from-left">
+        <div class="container" style="display:contents">
+          <div class="motion-copy reveal-left">
+            <div class="scene-no">01 / Inspect</div>
+            <h3>First We<br>Understand.</h3>
+            <p>
+              Every vehicle arrives with a different story. Our process starts
+              with a careful inspection, visual checks and precise diagnostics
+              before the repair work begins.
+            </p>
+            <div class="motion-points">
+              <div class="motion-point">Visual Inspection</div>
+              <div class="motion-point">Computer Diagnostics</div>
+              <div class="motion-point">Vehicle Health Check</div>
+              <div class="motion-point">Clear Recommendations</div>
+            </div>
+          </div>
+
+          <div class="motion-media reveal-right">
+            <div class="motion-image-wrap">
+              <img class="motion-image"
+                   src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1500&q=95"
+                   alt="Mechanic inspecting a vehicle"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="motion-road"></div>
+      </div>
+
+      <div class="motion-scene from-right">
+        <div class="container" style="display:contents">
+          <div class="motion-media reveal-left">
+            <div class="motion-image-wrap">
+              <img class="motion-image"
+                   src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1500&q=95"
+                   alt="Premium car on the road"
+                   loading="lazy">
+            </div>
+          </div>
+
+          <div class="motion-copy reveal-right">
+            <div class="scene-no">02 / Repair</div>
+            <h3>Precision<br>Under The Hood.</h3>
+            <p>
+              From scheduled maintenance to complex repairs, our technicians
+              combine workshop experience with modern equipment to bring your
+              vehicle back to dependable condition.
+            </p>
+            <div class="motion-points">
+              <div class="motion-point">Engine & Mechanical</div>
+              <div class="motion-point">AC Service</div>
+              <div class="motion-point">Electrical Systems</div>
+              <div class="motion-point">Brake & Suspension</div>
+            </div>
+          </div>
+        </div>
+        <div class="motion-road"></div>
+      </div>
+
+      <div class="motion-scene from-left">
+        <div class="container" style="display:contents">
+          <div class="motion-copy reveal-left">
+            <div class="scene-no">03 / Finish</div>
+            <h3>Leave Looking<br>Like New.</h3>
+            <p>
+              The final stage is about more than the repair. Detailing,
+              finishing and quality checks make sure your vehicle leaves the
+              workshop looking right and ready for the road.
+            </p>
+            <div class="motion-points">
+              <div class="motion-point">Detailing</div>
+              <div class="motion-point">Body & Paint</div>
+              <div class="motion-point">Final Quality Check</div>
+              <div class="motion-point">Road Ready</div>
+            </div>
+          </div>
+
+          <div class="motion-media reveal-right">
+            <div class="motion-image-wrap">
+              <img class="motion-image"
+                   src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=1500&q=95"
+                   alt="Premium vehicle ready for the road"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="motion-road"></div>
+      </div>
+    </section>
+
+
+
+    <!-- =======================================================
+     SERVICES
+======================================================= -->
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="kicker">Our Services</div>
+
+            <h2>Complete Automotive Care</h2>
+          </div>
+
+          <a href="services.html" class="btn"> View All Services </a>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+<img class="home-service-image" src="https://enquiry.dydindia.com/wp-content/uploads/2023/07/PERIODIC-SERVICE@-copy.jpg" alt="Periodic Car Service" loading="lazy">
+            <div class="service-number">01</div>
+
+            <h3>Periodic Car Service</h3>
+
+            <p>
+              Keep your car running smoothly with timely servicing, expert
+              inspection and reliable maintenance.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">01</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=88" alt="Revival Packs" loading="lazy">
+            <div class="service-number">02</div>
+
+            <h3>Revival Packs</h3>
+
+            <p>
+              Restore your car's performance with expert care and complete
+              vehicle revival services.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">02</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9S17VPphDro-UDwI8QvMYSLPQwQxCpj4vOeX2xODjoawYzcyJdBvL2sx0&s=10" alt="Tyres &amp; Batteries" loading="lazy">
+            <div class="service-number">03</div>
+
+            <h3>Tyres & Batteries</h3>
+
+            <p>
+              Enhance vehicle safety with durable tyres and high-performance
+              batteries.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">03</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTE7HMpGheeXtoZqXEzp1ZY-dSMTUCoNOoVpHj5wOJGt8716lFT6sBvjV0&s=10" alt="Body Repair" loading="lazy">
+            <div class="service-number">04</div>
+
+            <h3>Body Repair</h3>
+
+            <p>
+              Professional body restoration with a quality finish and
+              factory-like appearance.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">04</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ixEiAl2XIhJBUvmHgAlHn-21HAvPUR9L0dk_39gUd3DGr6Kwi7wJv7sG&s=10" alt="Fitments" loading="lazy">
+            <div class="service-number">05</div>
+
+            <h3>Fitments</h3>
+
+            <p>
+              Quality fitment solutions ensuring accurate installation and
+              improved vehicle functionality.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">05</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4Qf2AxQXtZj_PmNAxwaEZaX9CzXRFvWJDFSn-Y28oTdEj5CsnNBvJ0bp0&s=10" alt="Car AC" loading="lazy">
+            <div class="service-number">06</div>
+
+            <h3>Car AC</h3>
+
+            <p>
+              Professional AC repair and maintenance for better cooling and
+              cabin comfort.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">06</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://images.unsplash.com/photo-1607860108855-64acf2078ed9?auto=format&fit=crop&w=1200&q=88" alt="Car Care" loading="lazy">
+            <div class="service-number">07</div>
+
+            <h3>Car Care</h3>
+
+            <p>
+              Complete cleaning, polishing and protection services to maintain
+              your vehicle's appearance.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">07</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://bigsmobile.com/wp-content/uploads/2023/06/auto-detailing-car-interior-eps-2048x1367-1.jpeg" alt="Interior Detailing" loading="lazy">
+            <div class="service-number">08</div>
+
+            <h3>Interior Detailing</h3>
+
+            <p>
+              Deep interior cleaning, sanitizing and polishing for a fresh
+              premium cabin environment.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">08</div>
+          </div>
+
+          <div class="service-card">
+<img class="home-service-image" src="https://static-cdn.cars24.com/prod/auto-news24-cms/cars24-blog-images/2025/12/31/7f28ed53-77c7-41db-a56f-9a45b180ae4d-from-guesswork-to-quality--how-diagnostic-tools-are-rewriting-inspection-report-accuracy-in-the-used-car-market.webp?w=356&dpr=2.625&optimize=low&format=auto&quality=50" alt="Inspection &amp; Diagnostics" loading="lazy">
+            <div class="service-number">09</div>
+
+            <h3>Inspection & Diagnostics</h3>
+
+            <p>
+              Advanced diagnostics help detect hidden issues early for safer and
+              smoother driving.
+            </p>
+
+            <a href="services.html" class="service-link"> Explore Service → </a>
+
+            <div class="service-watermark">09</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+     CTA
+======================================================= -->
+
+    <section class="orange-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>
+            Car Maintenance
+            <br />
+            With Expert Hands.
+          </h2>
+
+          <p>
+            Professional service, advanced technology and reliable automotive
+            care for vehicles that need dependable performance.
+          </p>
+        </div>
+
+        <a href="contact.html" class="btn"> Get In Touch </a>
+      </div>
+    </section>
+
+    <!-- =======================================================
+     WHY CHOOSE US
+======================================================= -->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="kicker">Why Choose Us</div>
+
+            <h2>Reasons To Choose Us Every Time</h2>
+          </div>
+
+          <p class="section-intro">
+            We combine skilled technicians, modern equipment and
+            customer-focused service to deliver dependable automotive care.
+          </p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-image"></div>
+
+          <div class="why-content">
+            <div class="why-item">
+              <div class="why-item-number">01 / TECHNOLOGY</div>
+
+              <h3>High-End Technology</h3>
+
+              <p>
+                We utilize cutting-edge technology to diagnose and repair
+                vehicles with accuracy, ensuring reliable service every time.
+              </p>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-number">02 / PEOPLE</div>
+
+              <h3>Expert Team Members</h3>
+
+              <p>
+                Our experienced professionals understand automotive systems and
+                focus on precise, efficient and dependable repairs.
+              </p>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-number">03 / EQUIPMENT</div>
+
+              <h3>Quality Equipment</h3>
+
+              <p>
+                Professional equipment helps us deliver accurate diagnostics,
+                efficient maintenance and consistent workshop quality.
+              </p>
+            </div>
+
+            <div class="why-item">
+              <div class="why-item-number">04 / SERVICE</div>
+
+              <h3>Customer First</h3>
+
+              <p>
+                We focus on transparent communication, dependable workmanship
+                and a better service experience for every customer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+     PARTNER BRANDS
+======================================================= -->
+
+    
+    <section class="image-rail">
+      <div class="container">
+        <div class="image-rail-head reveal">
+          <div>
+            <div class="kicker">Automotive In Motion</div>
+            <h2>Made For The Road.</h2>
+          </div>
+          <p>Scroll through the workshop world — diagnostics, performance, care and the machines that keep everything moving.</p>
+        </div>
+      </div>
+
+      
+      <div class="rail-controls" aria-label="Made For The Road navigation">
+        <button class="rail-arrow rail-prev" type="button" aria-label="Previous cards">←</button>
+        <button class="rail-arrow rail-next" type="button" aria-label="Next cards">→</button>
+      </div>
+
+      <div class="image-rail-track" id="imageRail">
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=90" alt="Sports car" loading="lazy">
+          <div class="rail-caption"><small>Performance</small>Built To Move</div>
+        </article>
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=900&q=90" alt="Automotive workshop" loading="lazy">
+          <div class="rail-caption"><small>Workshop</small>Expert Hands</div>
+        </article>
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=90" alt="Premium automobile" loading="lazy">
+          <div class="rail-caption"><small>Automotive</small>Road Ready</div>
+        </article>
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=900&q=90" alt="Car exterior" loading="lazy">
+          <div class="rail-caption"><small>Care</small>Every Detail</div>
+        </article>
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1485291571150-772bcfc10da5?auto=format&fit=crop&w=900&q=90" alt="Car maintenance" loading="lazy">
+          <div class="rail-caption"><small>Service</small>Precision First</div>
+        </article>
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=900&q=90" alt="Luxury vehicle" loading="lazy">
+          <div class="rail-caption"><small>Complete Care</small>Drive Better</div>
+        </article>
+        <article class="rail-card">
+          <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=900&q=90" alt="Car detail" loading="lazy">
+          <div class="rail-caption"><small>Detailing</small>Finish Strong</div>
+        </article>
+      </div>
+    </section>
+
+<section class="client-section reveal" id="clients">
+      <div class="container">
+        <div class="client-top">
+          <div class="client-heading">
+            <div class="client-tab"><span>Our Clients</span></div>
+            <h2>Our Valued & Trusted <em>Partner Brands</em></h2>
+          </div>
+
+          <a href="gallery.html" class="client-more">
+            <span>View All More</span>
+            <span class="arrow">→</span>
+          </a>
+        </div>
+
+        <div class="client-grid">
+          <div class="client-card reveal">
+            <div class="client-logo pentair">
+              <span class="symbol">◆</span><span class="brand">PENTAIR</span>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo chiyoda">
+              <span class="symbol">▼</span><span class="brand">CHIYODA</span>
+              <small>CORPORATION</small>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo care">
+              <span class="symbol">⌁</span><span class="brand">Be Car Care Aware</span>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo sumco">
+              <span class="brand">SUMCO</span>
+              <small>SUMCO CORPORATION</small>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo yokohama">
+              <span class="symbol">»</span><span class="brand">YOKOHAMA</span>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo">
+              <span class="brand">Auto<br>Veitsbrake</span>
+              <small>COMPANY</small>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo national">
+              <span class="symbol">≋</span><span class="brand">National<br>Car Rental</span>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo calsonic">
+              <span class="symbol">◒</span><span class="brand">Calsonic Kansei</span>
+            </div>
+          </div>
+
+          <div class="client-card reveal">
+            <div class="client-logo nhcar">
+              <span class="symbol">⌁</span><span class="brand">NHCar</span>
+              <small>STRAHOV</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+     TESTIMONIALS
+======================================================= -->
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="kicker">Customer Voice</div>
+
+            <h2>What Our Customers Say</h2>
+          </div>
+        </div>
+
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              “UNICO MOTORS truly impressed me with their periodic car service.
+              My car feels smoother and more efficient than ever. Highly
+              recommended!”
+            </p>
+
+            <div class="customer">
+              <div class="customer-avatar">A</div>
+
+              <div>
+                <strong> Arindam Chatterjee </strong>
+
+                <span> Kolkata </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              “Body repair work was done with great precision. The team
+              explained everything clearly and delivered on time. Excellent
+              service!”
+            </p>
+
+            <div class="customer">
+              <div class="customer-avatar">S</div>
+
+              <div>
+                <strong> Subhajit Roy </strong>
+
+                <span> Siliguri </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial">
+            <div class="stars">★★★★★</div>
+
+            <p>
+              “Their inspection and diagnostics are spot-on. They identified the
+              exact issue and fixed it quickly. Very trustworthy workshop.”
+            </p>
+
+            <div class="customer">
+              <div class="customer-avatar">S</div>
+
+              <div>
+                <strong> Soumik Banerjee </strong>
+
+                <span> Asansol </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+     BLOG
+======================================================= -->
+
+    <section class="section" style="padding-top: 20px">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="kicker">Let's Talk</div>
+
+            <h2>Latest Automotive Insights</h2>
+          </div>
+
+          <a href="blog.html" class="btn"> View All Blogs </a>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div
+              class="blog-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=1000&q=88&quot;);
+              "
+            ></div>
+
+            <div class="blog-content">
+              <div class="blog-meta">21 Mar 2025 · Battery Check</div>
+
+              <h3>
+                How To Extend The Life Of Your Car With Preventive Maintenance
+              </h3>
+
+              <p>
+                Regular preventive maintenance like oil changes, tyre rotations
+                and brake inspections helps identify potential issues early.
+              </p>
+
+              <a href="blog.html" class="read-more"> Read More → </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div
+              class="blog-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1000&q=88&quot;);
+              "
+            ></div>
+
+            <div class="blog-content">
+              <div class="blog-meta">21 Mar 2025 · Auto Car</div>
+
+              <h3>What's The Best Time To Schedule Your Car's Tune-Up?</h3>
+
+              <p>
+                Regular preventive maintenance helps keep your vehicle
+                efficient, reliable and ready for the road.
+              </p>
+
+              <a href="blog.html" class="read-more"> Read More → </a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div
+              class="blog-image"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=88&quot;);
+              "
+            ></div>
+
+            <div class="blog-content">
+              <div class="blog-meta">21 Mar 2025 · Car Denting Repair</div>
+
+              <h3>
+                Top 10 Car Repairs That Can Save You Money In The Long Run
+              </h3>
+
+              <p>
+                Timely inspection and proper repairs can prevent larger vehicle
+                expenses and improve long-term reliability.
+              </p>
+
+              <a href="blog.html" class="read-more"> Read More → </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =======================================================
+         VINFAST DEALER LOCATOR
+    ======================================================= -->
+    <section class="vinfast-section" id="vinfast" aria-label="VinFast electric mobility">
+      <div class="vinfast-bg"></div>
+      <div class="vinfast-inner">
+
+        <div class="vinfast-copy reveal">
+          <div class="vinfast-kicker">UNICO MOTORS × VINFAST</div>
+
+          <h2>Step Into the<br><span>Electric Future.</span></h2>
+
+          <p class="vinfast-intro">
+            VinFast is building a new premium electric-mobility experience in India,
+            combining modern EV technology, distinctive SUV design and a growing
+            customer-focused sales and service ecosystem.
+          </p>
+
+          <p class="vinfast-text">
+            The India portfolio includes the <strong>VF 6</strong> and <strong>VF 7</strong>,
+            premium electric SUVs designed around connected technology, intelligent
+            driver assistance and everyday usability. VinFast has also been expanding
+            its local presence through manufacturing, dealerships and after-sales
+            infrastructure across the country.
+          </p>
+
+          <div class="vinfast-stats">
+            <div class="vf-stat">
+              <strong>VF 6</strong>
+              <span>Compact 5-seat eSUV</span>
+            </div>
+            <div class="vf-stat">
+              <strong>VF 7</strong>
+              <span>Premium 5-seat eSUV</span>
+            </div>
+            <div class="vf-stat">
+              <strong>3S</strong>
+              <span>Sales · Service · Spares</span>
+            </div>
+          </div>
+
+          <div class="vinfast-actions">
+            <a class="vinfast-button" href="vinfast.html" target="_blank" rel="noopener noreferrer">
+              Find Us At VinFast Dealer <span>↗</span>
+            </a>
+            <a class="vinfast-secondary" href="vinfast.html" target="_blank" rel="noopener noreferrer">
+              Explore VinFast India
+            </a>
+          </div>
+        </div>
+
+        <div class="vinfast-visual">
+          <div class="vinfast-image-wrap">
+            <img
+              src="https://vinfastauto.in/static/delivery/limo-green/images/color-silver.webp"
+              alt="VinFast electric vehicle"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="vinfast-outline">EV</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================
+     CONTACT
+======================================================= -->
+
+    <section class="section contact-section" id="appointment-form">
+      <div class="container contact-inner">
+        <div>
+          <div class="kicker">Let's Talk</div>
+
+          <h2>
+            Get In Touch
+            <br />
+            With Us!
+          </h2>
+
+          <p>
+            We're here to provide expert assistance. Reach out today for
+            reliable auto repair, maintenance and complete vehicle care.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="contact-icon">⌖</div>
+
+              <div>
+                <strong> Address </strong>
+
+                <span> New Town, Kolkata, West Bengal, India </span>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">☎</div>
+
+              <div>
+                <strong> Phone </strong>
+
+                <span> +91 81009 29501 · 1800 889 2021 </span>
+              </div>
+            </div>
+
+            <div class="contact-detail">
+              <div class="contact-icon">@</div>
+
+              <div>
+                <strong> Email </strong>
+
+                <span> info@unicomotors.com </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <h3>Book An Appointment</h3>
+
+          <form class="contact-form" onsubmit="submitForm(event)">
+            <input type="text" placeholder="Full Name" required />
+
+            <input type="tel" placeholder="Phone Number" required />
+
+            <input type="email" placeholder="Email Address" />
+
+            <select required>
+              <option value="">Select Service</option>
+
+              <option>Periodic Car Service</option>
+
+              <option>Revival Packs</option>
+
+              <option>Tyres & Batteries</option>
+
+              <option>Body Repair</option>
+
+              <option>Fitments</option>
+
+              <option>Car AC</option>
+
+              <option>Inspection & Diagnostics</option>
+
+              <option>Complete Car Service</option>
+            </select>
+
+            <textarea
+              class="form-full"
+              placeholder="Tell us about your vehicle or service requirement"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn btn-dark form-full">
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================
+     FOOTER
+======================================================= -->
+
+    <footer class="footer">
+      <div class="container footer-grid footer-grid-modern">
+        <div class="footer-brand">
+          <div class="footer-brand-logo">
+            <img class="unico-logo-image footer-logo-image" src="assets/unico-home-logo.png" alt="Unico Motors" />
+          </div>
+          <div class="footer-brand-line"></div>
+          <p>
+            UNICO MOTORS, a unit of Unico Logistics &amp; Carrier Pvt. Ltd. with
+            myTVS, offers modern tools, quality car repair and reliable
+            automotive service solutions.
+          </p>
+          <div class="footer-socials" aria-label="Social media">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Companies</h3>
+          <a href="index.html">Home</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="footer-column">
+          <h3>Explore</h3>
+          <a href="vinfast.html">VinFast Models</a>
+          <a href="blog.html">Blog</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Book Appointment</a>
+        </div>
+
+        <div class="footer-column footer-contact">
+          <h3>Contact Info</h3>
+          <p>Plot No – 7, Jothbhim, Po. Hatgacha, Ps. KLC (Near Green Field Heights, New Town)</p>
+          <p>Dist: South 24 Paraganas, Kolkata – 700 156, West Bengal, India.</p>
+          <a href="mailto:info@unicomotors.com">info@unicomotors.com</a>
+          <a href="tel:+918100929501">+91 81009 29501</a>
+        </div>
+      </div>
+
+      <div class="container footer-bottom footer-bottom-modern">
+        <span>© 2026 UNICO MOTORS. All Rights Reserved.</span>
+        <span>Built For The Road · Powered By Unico Motors</span>
+      </div>
+    </footer>
+
+    <!-- =======================================================
+     JAVASCRIPT
+======================================================= -->
+
+    <script>
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      const navLinks = document.getElementById("navLinks");
+
+      mobileMenu.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
+      });
+
+      document.querySelectorAll(".nav-links a").forEach(function (link) {
+        link.addEventListener("click", function () {
+          navLinks.classList.remove("show");
+        });
+      });
+
+
+      const revealObserver = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {threshold:0.12});
+      document.querySelectorAll(".reveal").forEach(el=>revealObserver.observe(el));
+
+      document.querySelectorAll(".tilt-card").forEach(card=>{
+        card.addEventListener("mousemove",(e)=>{
+          const r=card.getBoundingClientRect();
+          const x=(e.clientX-r.left)/r.width-.5;
+          const y=(e.clientY-r.top)/r.height-.5;
+          card.style.transform=`perspective(900px) rotateX(${y*-3}deg) rotateY(${x*4}deg) translateY(-3px)`;
+        });
+        card.addEventListener("mouseleave",()=>{card.style.transform="";});
+      });
+
+      const heroCar=document.querySelector(".hero-car-cutout");
+      if(heroCar && !window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        window.addEventListener("scroll",()=>{
+          heroCar.style.transform=`translateY(${Math.min(window.scrollY*.10,55)}px)`;
+        },{passive:true});
+      }
+
+
+      /* =====================================================
+         REALISTIC SCROLL REVEALS
+         ===================================================== */
+      const motionScenes = document.querySelectorAll(".motion-scene");
+
+      const motionObserver = new IntersectionObserver((entries)=>{
+        entries.forEach(entry=>{
+          if(entry.isIntersecting){
+            entry.target.classList.add("is-visible");
+          }
+        });
+      },{
+        threshold:0.18,
+        rootMargin:"0px 0px -8% 0px"
+      });
+
+      motionScenes.forEach(scene=>motionObserver.observe(scene));
+
+      document.querySelectorAll(".reveal-left,.reveal-right,.motion-story-head,.image-rail-head").forEach(el=>{
+        motionObserver.observe(el);
+      });
+
+      /* =========================================================
+         Scroll-linked horizontal image rail
+         The section gets enough vertical space for the entire rail,
+         then the cards translate from first card to last card.
+         ========================================================= */
+      const imageRail = document.getElementById("imageRail");
+      const imageRailSection = imageRail ? imageRail.closest(".image-rail") : null;
+
+      if(imageRail && imageRailSection){
+        let ticking = false;
+
+        const measureRail = ()=>{
+          const travel = Math.max(0, imageRail.scrollWidth - window.innerWidth + 24);
+          imageRailSection.style.setProperty("--rail-travel", `${travel}px`);
+
+          /*
+           * The sticky rail needs vertical room equal to its horizontal
+           * travel. This guarantees the final card can reach the viewport.
+           */
+          const naturalHeight = imageRail.offsetHeight + 170;
+          imageRailSection.style.minHeight = `${Math.max(naturalHeight, window.innerHeight + travel)}px`;
+          updateRail();
+        };
+
+        const updateRail = ()=>{
+          const rect = imageRailSection.getBoundingClientRect();
+          const sectionTravel = Math.max(
+            1,
+            imageRailSection.offsetHeight - window.innerHeight
+          );
+
+          /*
+           * Start when the section reaches the viewport and finish only
+           * when the complete horizontal travel has been consumed.
+           */
+          const progress = Math.max(
+            0,
+            Math.min(1, -rect.top / sectionTravel)
+          );
+
+          const travel = Math.max(0, imageRail.scrollWidth - window.innerWidth + 24);
+          imageRail.style.transform =
+            `translate3d(${-travel * progress}px,0,0)`;
+
+          ticking = false;
+        };
+
+        const requestRailUpdate = ()=>{
+          if(!ticking){
+            requestAnimationFrame(updateRail);
+            ticking = true;
+          }
+        };
+
+        window.addEventListener("scroll", requestRailUpdate, {passive:true});
+        window.addEventListener("resize", ()=>{
+          measureRail();
+          requestRailUpdate();
+        }, {passive:true});
+
+        window.addEventListener("load", measureRail);
+
+        /*
+         * Images may finish loading after DOMContentLoaded, so measure
+         * again shortly after load and on each image completion.
+         */
+        imageRail.querySelectorAll("img").forEach(img=>{
+          if(!img.complete) img.addEventListener("load", measureRail, {once:true});
+        });
+
+        setTimeout(measureRail, 100);
+        setTimeout(measureRail, 500);
+      }
+
+      /* Subtle parallax on the large story photographs */
+      if(!window.matchMedia("(prefers-reduced-motion: reduce)").matches){
+        const parallaxImages = document.querySelectorAll(".motion-image");
+
+        window.addEventListener("scroll",()=>{
+          const viewportCenter = window.innerHeight/2;
+          parallaxImages.forEach(img=>{
+            const r=img.getBoundingClientRect();
+            if(r.bottom>0 && r.top<window.innerHeight){
+              const offset=(r.top+r.height/2-viewportCenter)*-0.055;
+              img.style.transform=`scale(1.04) translate3d(0,${offset}px,0)`;
+            }
+          });
+        },{passive:true});
+      }
+
+
+      function submitForm(event) {
+        event.preventDefault();
+
+        alert(
+          "Thank you. Your request has been received. We will contact you shortly.",
+        );
+      }
+    </script>
+  
+<style>
+/* =========================================================
+   FINAL SPACING — SCROLL STORY
+   ========================================================= */
+.motion-scene{
+  padding-left:clamp(28px,6vw,110px) !important;
+  padding-right:clamp(28px,6vw,110px) !important;
+}
+.motion-scene .motion-copy{
+  min-width:0;
+}
+.motion-scene .motion-media{
+  min-width:0;
+}
+
+/* Keep the story balanced on wide displays. */
+@media(min-width:1200px){
+  .motion-scene{
+    padding-left:max(48px,calc((100vw - 1440px)/2 + 24px)) !important;
+    padding-right:max(48px,calc((100vw - 1440px)/2 + 24px)) !important;
+  }
+}
+@media(max-width:850px){
+  .motion-scene{
+    padding-left:24px !important;
+    padding-right:24px !important;
+  }
+}
+</style>
+
+
+<style>
+/* =========================================================
+   HERO FINAL CLEANUP
+   One transparent car only — no red panel, no image box.
+   ========================================================= */
+.hero{
+  background:#f6f7f8 !important;
+  overflow:hidden !important;
+}
+.hero::before,
+.hero::after{
+  display:none !important;
+  content:none !important;
+}
+.hero-inner{
+  grid-template-columns:48% 52% !important;
+}
+.hero-visual{
+  position:relative !important;
+  height:590px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.hero-photo-frame{
+  position:relative !important;
+  inset:auto !important;
+  width:min(760px,58vw) !important;
+  height:520px !important;
+  overflow:visible !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  clip-path:none !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.hero-photo{
+  display:block !important;
+  width:115% !important;
+  max-width:none !important;
+  height:auto !important;
+  max-height:590px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  mix-blend-mode:normal !important;
+  filter:drop-shadow(0 28px 24px rgba(0,0,0,.18)) !important;
+  transform:translate3d(0,0,0) scale(1) !important;
+  animation:heroCarFloat 5.5s ease-in-out infinite !important;
+}
+@keyframes heroCarFloat{
+  0%,100%{transform:translate3d(0,4px,0) scale(1)}
+  50%{transform:translate3d(-8px,-8px,0) scale(1.015)}
+}
+
+/* remove every old hero decoration */
+.hero-tech-ring,
+.hero-spec,
+.hero-number{
+  display:none !important;
+}
+
+/* Keep hero copy clean and dark */
+.hero-content{
+  color:#101418 !important;
+}
+.hero h1,
+.hero h1 span{
+  color:#101418 !important;
+}
+.hero-description{
+  color:#657078 !important;
+}
+.hero-buttons .btn-outline{
+  color:#101418 !important;
+  background:transparent !important;
+  border-color:#c8cdd1 !important;
+}
+.hero-buttons .btn-outline:hover{
+  color:#fff !important;
+  background:#101418 !important;
+  border-color:#101418 !important;
+}
+
+/* No red decorative block on the right edge */
+.hero-visual::before,
+.hero-visual::after{
+  display:none !important;
+  content:none !important;
+}
+
+/* Hero should not leave an artificial dark strip below it */
+.hero-bottom{
+  background:#101418 !important;
+  border-top:2px solid #f47b00 !important;
+}
+
+/* Mobile */
+@media(max-width:800px){
+  .hero-inner{
+    grid-template-columns:1fr !important;
+  }
+  .hero-visual{
+    height:370px !important;
+    margin-top:10px !important;
+  }
+  .hero-photo-frame{
+    width:100% !important;
+    height:360px !important;
+  }
+  .hero-photo{
+    width:115% !important;
+    max-height:370px !important;
+  }
+}
+@media(max-width:600px){
+  .hero-visual{height:285px !important}
+  .hero-photo-frame{height:280px !important}
+  .hero-photo{
+    width:125% !important;
+    max-height:300px !important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-photo{animation:none !important}
+}
+</style>
+
+
+<style id="hero-visibility-fix">
+/* HERO VISIBILITY FIX — keep one car image, no box/panel */
+.hero-visual{
+  min-width:0 !important;
+  overflow:visible !important;
+  visibility:visible !important;
+  opacity:1 !important;
+}
+.hero-photo-frame{
+  visibility:visible !important;
+  opacity:1 !important;
+  background:transparent !important;
+  overflow:visible !important;
+}
+.hero-photo{
+  visibility:visible !important;
+  opacity:1 !important;
+  display:block !important;
+  position:relative !important;
+  z-index:10 !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:760px !important;
+  max-height:560px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+}
+@media(max-width:800px){
+  .hero-photo{width:100% !important;max-height:370px !important;}
+}
+</style>
+
+<style id="unico-orange-hero-final">
+/* UNICO MOTORS — orange automotive hero */
+:root{
+  --orange:#f47b00 !important;
+  --orange-dark:#c85f00 !important;
+}
+.logo{display:flex !important;align-items:center !important;}
+.unico-logo-image{
+  display:block !important;
+  width:310px !important;
+  height:auto !important;
+  max-height:64px !important;
+  object-fit:contain !important;
+}
+.hero{background:#fff !important;}
+.hero-visual{
+  background:transparent !important;
+  overflow:visible !important;
+}
+.hero-photo-frame{
+  width:min(760px,100%) !important;
+  height:590px !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  border:0 !important;
+  overflow:visible !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:12px !important;
+}
+.hero-brand-logo{
+  display:block !important;
+  width:min(330px,62%) !important;
+  height:auto !important;
+  object-fit:contain !important;
+  background:transparent !important;
+  position:relative !important;
+  z-index:12 !important;
+}
+.hero-photo{
+  display:block !important;
+  width:110% !important;
+  max-width:820px !important;
+  height:auto !important;
+  max-height:500px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  background:transparent !important;
+  mix-blend-mode:normal !important;
+  filter:hue-rotate(15deg) saturate(1.18) drop-shadow(0 26px 24px rgba(0,0,0,.16)) !important;
+  animation:heroCarFloatOrange 5.5s ease-in-out infinite !important;
+}
+@keyframes heroCarFloatOrange{
+  0%,100%{transform:translate3d(0,4px,0) scale(1)}
+  50%{transform:translate3d(-8px,-7px,0) scale(1.015)}
+}
+.hero-tech-ring,.hero-spec,.hero-number,.hero-visual::before,.hero-visual::after{display:none !important;}
+.btn,.nav-button{background:#f47b00 !important;border-color:#f47b00 !important;}
+.btn:hover,.nav-button:hover{background:#c85f00 !important;border-color:#c85f00 !important;}
+.kicker,.service-number,.service-link,.stars,.contact-icon{color:#f47b00 !important;}
+.kicker:before,.hero-label:before{background:#f47b00 !important;}
+.hero-bottom{border-top-color:#f47b00 !important;}
+@media(max-width:800px){
+  .unico-logo-image{width:245px !important;max-height:52px !important;}
+  .hero-photo-frame{height:420px !important;}
+  .hero-brand-logo{width:240px !important;}
+  .hero-photo{width:112% !important;max-height:330px !important;}
+}
+@media(max-width:600px){
+  .unico-logo-image{width:205px !important;}
+  .hero-photo-frame{height:330px !important;}
+  .hero-brand-logo{width:190px !important;}
+  .hero-photo{width:120% !important;max-height:250px !important;}
+}
+</style>
+
+<style>
+.footer-brand-logo img{width:230px;max-width:100%;height:auto;display:block;margin-bottom:22px;filter:none}
+.hero-brand-logo{display:none!important}
+.hero-photo-frame{padding:0!important}
+@media(max-width:900px){.nav-links{position:absolute;left:0;right:0;top:80px;flex:none;width:100%;justify-content:flex-start;padding:0 20px;gap:0}.nav-links .nav-button{position:static;transform:none}}
+</style>
+
+<script id="image-rail-arrow-script">
+(function(){
+  const rail = document.getElementById("imageRail");
+  const section = rail ? rail.closest(".image-rail") : null;
+  const prev = section ? section.querySelector(".rail-prev") : null;
+  const next = section ? section.querySelector(".rail-next") : null;
+
+  if(!rail || !prev || !next) return;
+
+  let position = 0;
+
+  function maxTravel(){
+    return Math.max(0, rail.scrollWidth - window.innerWidth);
+  }
+
+  function stepSize(){
+    const card = rail.querySelector(".rail-card");
+    if(!card) return 354;
+    const gap = parseFloat(getComputedStyle(rail).gap) || 14;
+    return card.getBoundingClientRect().width + gap;
+  }
+
+  function render(){
+    const max = maxTravel();
+    position = Math.max(0, Math.min(position, max));
+    rail.style.transform = "translate3d(" + (-position) + "px,0,0)";
+    prev.disabled = position <= 2;
+    next.disabled = position >= max - 2;
+  }
+
+  prev.addEventListener("click", function(){
+    position -= stepSize();
+    render();
+  });
+
+  next.addEventListener("click", function(){
+    position += stepSize();
+    render();
+  });
+
+  window.addEventListener("resize", function(){
+    position = Math.min(position, maxTravel());
+    render();
+  });
+
+  render();
+})();
+</script>
+
+
+<style id="footer-logo-match-nav">
+  .footer-brand-logo{
+    display:flex !important;
+    align-items:center !important;
+  }
+
+  .footer-brand-logo img{
+    width:310px !important;
+    max-width:100% !important;
+    height:auto !important;
+    max-height:64px !important;
+    object-fit:contain !important;
+    display:block !important;
+    margin-bottom:22px !important;
+    filter:none !important;
+  }
+
+  @media(max-width:800px){
+    .footer-brand-logo img{
+      width:245px !important;
+      max-height:52px !important;
+    }
+  }
+
+  @media(max-width:600px){
+    .footer-brand-logo img{
+      width:205px !important;
+      max-height:none !important;
+    }
+  }
+</style>
+
+
+<style id="final-unico-logo-sizing">
+/* =========================================================
+   FINAL UNICO MOTORS LOGO — NAV + FOOTER
+   Uses the same cropped Unico Motors artwork in both places.
+   ========================================================= */
+
+.navbar .nav-inner{
+  min-height:86px !important;
+}
+
+.navbar .logo{
+  width:auto !important;
+  height:86px !important;
+  display:flex !important;
+  align-items:center !important;
+  overflow:visible !important;
+  flex-shrink:0 !important;
+}
+
+.navbar .unico-logo-image{
+  width:305px !important;
+  height:70px !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  display:block !important;
+  margin:0 !important;
+}
+
+.footer{
+  padding:72px 0 24px !important;
+}
+
+.footer-grid{
+  grid-template-columns:1.65fr 1fr 1fr 1.25fr !important;
+  gap:56px !important;
+  align-items:start !important;
+}
+
+.footer-brand-logo{
+  width:100% !important;
+  min-height:78px !important;
+  display:flex !important;
+  align-items:flex-start !important;
+  justify-content:flex-start !important;
+  overflow:visible !important;
+  margin-bottom:22px !important;
+}
+
+.footer-brand-logo .footer-logo-image{
+  width:305px !important;
+  height:70px !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  display:block !important;
+  margin:0 !important;
+  filter:none !important;
+}
+
+.footer-grid > div:nth-child(2),
+.footer-grid > div:nth-child(3){
+  text-align:center !important;
+}
+
+.footer-grid > div:nth-child(2) h3,
+.footer-grid > div:nth-child(3) h3{
+  text-align:center !important;
+}
+
+.footer-grid > div:nth-child(2) p,
+.footer-grid > div:nth-child(3) p,
+.footer-grid > div:nth-child(2) a,
+.footer-grid > div:nth-child(3) a{
+  display:block !important;
+  text-align:center !important;
+}
+
+.footer-grid > div:last-child{
+  text-align:left !important;
+}
+
+.footer-grid > div:last-child h3{
+  text-align:left !important;
+}
+
+.footer-bottom{
+  margin-top:52px !important;
+  padding-top:20px !important;
+}
+
+/* Keep the logo proportional on smaller screens */
+@media(max-width:900px){
+  .navbar .nav-inner{
+    min-height:80px !important;
+    height:80px !important;
+  }
+  .navbar .logo{
+    height:80px !important;
+  }
+  .navbar .unico-logo-image{
+    width:255px !important;
+    height:58px !important;
+  }
+  .footer{
+    padding-top:58px !important;
+  }
+  .footer-grid{
+    grid-template-columns:1fr 1fr !important;
+    gap:42px 30px !important;
+  }
+  .footer-brand-logo .footer-logo-image{
+    width:255px !important;
+    height:58px !important;
+  }
+  .footer-grid > div:last-child{
+    text-align:left !important;
+  }
+}
+
+@media(max-width:600px){
+  .navbar .nav-inner{
+    height:70px !important;
+    min-height:70px !important;
+  }
+  .navbar .logo{
+    height:70px !important;
+    min-width:0 !important;
+  }
+  .navbar .unico-logo-image{
+    width:205px !important;
+    height:48px !important;
+  }
+  .footer-grid{
+    grid-template-columns:1fr !important;
+    gap:34px !important;
+  }
+  .footer-brand-logo .footer-logo-image{
+    width:245px !important;
+    height:55px !important;
+  }
+  .footer-grid > div:nth-child(2),
+  .footer-grid > div:nth-child(3),
+  .footer-grid > div:last-child{
+    text-align:center !important;
+  }
+  .footer-grid > div:nth-child(2) h3,
+  .footer-grid > div:nth-child(3) h3,
+  .footer-grid > div:last-child h3{
+    text-align:center !important;
+  }
+}
+</style>
+
+
+
+    <!-- SCROLL ROAD CAR -->
+    <div class="scroll-road-car" id="scrollRoadCar" aria-hidden="true">
+      <div class="road-car">
+        <div class="road-car-body">
+          <span class="road-car-window road-car-window-a"></span>
+          <span class="road-car-window road-car-window-b"></span>
+          <span class="road-car-light"></span>
+        </div>
+        <span class="road-wheel road-wheel-a"><i></i></span>
+        <span class="road-wheel road-wheel-b"><i></i></span>
+      </div>
+    </div>
+
+<style id="continuous-scroll-car-final">
+.scroll-road-car{opacity:1!important}
+.scroll-road-car .road-car{transition:none!important;animation:none!important}
+.scroll-road-car.is-driving .road-car,.scroll-road-car.is-driving.reverse .road-car{animation:none!important}
+.scroll-road-car .road-wheel i{animation:wheelSpin .7s linear infinite}
+@keyframes wheelSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.scroll-road-car .road-wheel i{animation:none!important}}
+</style>
+
+<style id="hero-interactive-3d-final">
+/* =========================================================
+   HERO VF8 — CLEAN INTERACTIVE CAR
+   Uses the exact VF8 hero reference image, keeps the car
+   fully visible, slowly rotates automatically and supports
+   left/right mouse or touch dragging.
+   ========================================================= */
+.hero.hero-3d-ready{overflow:hidden !important}
+.hero-3d-visual{
+  position:relative !important;
+  height:590px !important;
+  min-width:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  overflow:visible !important;
+}
+.hero-3d-stage{
+  position:relative !important;
+  width:min(790px,61vw) !important;
+  height:555px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  perspective:1400px !important;
+  overflow:visible !important;
+}
+.hero-3d-glow{
+  position:absolute !important;
+  z-index:0 !important;
+  left:51% !important;
+  top:65% !important;
+  width:78% !important;
+  height:27% !important;
+  transform:translate(-50%,-50%) !important;
+  border-radius:50% !important;
+  background:radial-gradient(ellipse,rgba(244,123,0,.18) 0%,rgba(244,123,0,.07) 38%,rgba(244,123,0,0) 74%) !important;
+  filter:blur(18px) !important;
+  pointer-events:none !important;
+}
+.hero-3d-stage::before{
+  content:"" !important;
+  position:absolute !important;
+  z-index:0 !important;
+  left:50% !important;
+  bottom:8% !important;
+  width:72% !important;
+  height:12% !important;
+  transform:translateX(-50%) !important;
+  border:2px solid rgba(244,123,0,.42) !important;
+  border-top-color:rgba(244,123,0,.10) !important;
+  border-radius:50% !important;
+  box-shadow:0 0 0 8px rgba(244,123,0,.025),0 0 32px rgba(244,123,0,.09) !important;
+  pointer-events:none !important;
+}
+.hero-car-interactive{
+  position:relative !important;
+  z-index:3 !important;
+  width:min(760px,100%) !important;
+  height:500px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  transform-style:preserve-3d !important;
+  cursor:grab !important;
+  user-select:none !important;
+  -webkit-user-select:none !important;
+  touch-action:none !important;
+  outline:none !important;
+}
+.hero-car-interactive:active{cursor:grabbing !important}
+.hero-car-image{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  max-height:500px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  user-select:none !important;
+  -webkit-user-drag:none !important;
+  pointer-events:none !important;
+  mix-blend-mode:multiply !important;
+  filter:saturate(1.04) contrast(1.02) brightness(1.03) drop-shadow(0 28px 22px rgba(0,0,0,.13)) !important;
+  transform-origin:center center !important;
+  will-change:transform !important;
+}
+.hero-3d-hint{
+  position:absolute !important;
+  z-index:5 !important;
+  top:24px !important;
+  right:26px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  gap:5px !important;
+  color:#7d878d !important;
+  font:800 9px/1.2 Arial,sans-serif !important;
+  letter-spacing:1.2px !important;
+  pointer-events:none !important;
+  opacity:.88 !important;
+}
+.hero-3d-mouse{
+  font-size:30px !important;
+  line-height:1 !important;
+  color:#f47b00 !important;
+  font-weight:400 !important;
+}
+.hero-360-label{
+  position:absolute !important;
+  z-index:5 !important;
+  right:7% !important;
+  bottom:2% !important;
+  color:#111518 !important;
+  font:900 31px/1 Arial,sans-serif !important;
+  letter-spacing:-1px !important;
+  pointer-events:none !important;
+}
+.hero-360-label::after{
+  content:"↔" !important;
+  display:block !important;
+  text-align:center !important;
+  color:#f47b00 !important;
+  font-size:25px !important;
+  line-height:.8 !important;
+  margin-top:4px !important;
+}
+.hero-360-label small{
+  display:block !important;
+  margin-top:6px !important;
+  text-align:center !important;
+  color:#69747c !important;
+  font-size:8px !important;
+  letter-spacing:1.6px !important;
+}
+.hero-3d-visual .hero-photo-frame,
+.hero-3d-visual .hero-photo{display:none !important}
+@media(max-width:1100px){
+  .hero-3d-stage{width:min(720px,62vw) !important;height:530px !important}
+  .hero-car-interactive{height:470px !important}
+  .hero-car-image{max-height:470px !important}
+}
+@media(max-width:800px){
+  .hero-3d-visual{height:400px !important;margin-top:5px !important}
+  .hero-3d-stage{width:100% !important;height:400px !important}
+  .hero-car-interactive{width:100% !important;height:360px !important}
+  .hero-car-image{max-height:360px !important}
+  .hero-3d-hint{top:4px !important;right:12px !important}
+  .hero-360-label{right:3% !important;bottom:1% !important;font-size:23px !important}
+}
+@media(max-width:600px){
+  .hero-3d-visual{height:320px !important}
+  .hero-3d-stage{height:320px !important}
+  .hero-car-interactive{height:300px !important}
+  .hero-car-image{max-height:300px !important}
+  .hero-3d-hint{font-size:7px !important;top:0 !important;right:5px !important}
+  .hero-3d-mouse{font-size:22px !important}
+  .hero-360-label{font-size:18px !important}
+  .hero-360-label::after{font-size:18px !important}
+}
+</style>
+
+<script id="hero-interactive-3d-js">
+/* The embedded 3D viewer provides real 360° rotation and mouse/touch orbit controls. */
+</script>
+
+
+<style id="hero-car-true-360-final">
+/* TRUE 360° HERO CAR — real 3D model, no card, no labels, no rings */
+.hero-3d-visual{position:relative;z-index:3;display:flex;align-items:center;justify-content:center;height:570px;overflow:visible}
+.hero-3d-stage{position:relative;width:min(760px,58vw);height:540px;display:flex;align-items:center;justify-content:center;background:transparent;overflow:visible}
+.hero-car-interactive{position:relative;width:100%;height:100%;background:transparent;border:0;box-shadow:none;overflow:hidden;touch-action:pan-y;cursor:grab}
+.hero-car-interactive:active{cursor:grabbing}
+.hero-vf8-viewer{position:absolute;inset:0;width:100%;height:100%;border:0;background:transparent;display:block}
+/* Remove any legacy decorative hero overlays */
+.hero-3d-glow,.hero-tech-ring,.hero-spec,.hero-number,.hero-360-label{display:none!important}
+@media(max-width:1100px){
+  .hero-3d-stage{width:min(720px,62vw);height:500px}
+}
+@media(max-width:800px){
+  .hero-3d-visual{height:400px;margin-top:5px}
+  .hero-3d-stage{width:100%;height:400px}
+}
+@media(max-width:600px){
+  .hero-3d-visual{height:310px}
+  .hero-3d-stage{height:310px}
+}
+</style>
+
+
+<style id="hero-true-360-override-final">
+.hero-3d-visual{overflow:visible!important;background:transparent!important}
+.hero-3d-stage{background:transparent!important;box-shadow:none!important;border:0!important;overflow:visible!important}
+.hero-car-interactive{background:transparent!important;box-shadow:none!important;border:0!important;overflow:hidden!important}
+.hero-vf8-viewer{background:transparent!important}
+.hero-car-image{display:none!important}
+.hero-3d-glow,.hero-tech-ring,.hero-spec,.hero-number,.hero-360-label{display:none!important}
+</style>
+
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+<style id="hero-game-style-final">
+/* FINAL HERO: game-style 3D car, transparent stage, no UI */
+.hero.hero-3d-ready{overflow:hidden!important}
+.hero-3d-visual{height:590px!important;overflow:visible!important;background:transparent!important}
+.hero-3d-stage{width:min(790px,61vw)!important;height:555px!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important;perspective:none!important}
+.hero-3d-stage::before,.hero-3d-glow,.hero-3d-hint,.hero-360-label,.hero-tech-ring,.hero-spec,.hero-number{display:none!important}
+.hero-car-interactive{width:100%!important;height:100%!important;display:flex!important;align-items:center!important;justify-content:center!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important;cursor:grab!important;touch-action:none!important}
+.hero-car-interactive:active{cursor:grabbing!important}
+.hero-vf8-viewer,.hero-car-image{display:none!important}
+.hero-car-model{display:block!important;width:100%!important;height:100%!important;background:transparent!important;--poster-color:transparent;--progress-bar-color:transparent;--progress-mask:transparent;--progress-bar-height:0px;--interaction-prompt-display:none;outline:none!important}
+.hero-car-model::part(default-progress-bar){display:none!important}
+@media(max-width:1100px){.hero-3d-stage{width:min(720px,62vw)!important;height:500px!important}.hero-car-interactive{height:100%!important}}
+@media(max-width:800px){.hero-3d-visual{height:400px!important;margin-top:5px!important}.hero-3d-stage{width:100%!important;height:400px!important}}
+@media(max-width:600px){.hero-3d-visual{height:320px!important}.hero-3d-stage{height:320px!important}}
+@media(prefers-reduced-motion:reduce){.hero-car-model{--auto-rotate:0!important}}
+</style>
+<script id="hero-game-rotation-final">
+(function(){
+  const model=document.getElementById('heroCarModel');
+  if(!model) return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function setAuto(){
+    if(reduce.matches){
+      model.removeAttribute('auto-rotate');
+    }else{
+      model.setAttribute('auto-rotate','');
+      model.setAttribute('auto-rotate-delay','0');
+      model.setAttribute('rotation-per-second','10deg');
+    }
+  }
+  setAuto();
+  reduce.addEventListener?.('change',setAuto);
+})();
+</script>
+
+<style id="hero-hd-render-final">
+.hero-car-model{
+  width:100%!important;
+  height:100%!important;
+  background:transparent!important;
+  --poster-color:transparent;
+  --progress-bar-color:transparent;
+  --progress-mask:transparent;
+  --progress-bar-height:0px;
+  --interaction-prompt-display:none;
+  image-rendering:auto!important;
+  filter:saturate(1.06) contrast(1.03)!important;
+}
+.hero-car-model::part(default-progress-bar){display:none!important}
+.hero-car-interactive{transform:translateZ(0);backface-visibility:hidden}
+</style>
+<script id="hero-hd-quality-final">
+(function(){
+  const m=document.getElementById('heroCarModel');
+  if(!m) return;
+  m.setAttribute('environment-image','https://modelviewer.dev/shared-assets/environments/whipplecreek.hdr');
+  m.setAttribute('tone-mapping','aces');
+  m.setAttribute('exposure','1.15');
+  m.setAttribute('shadow-intensity','0.32');
+  m.setAttribute('shadow-softness','0.35');
+})();
+</script>
+
+<style id="hero-vf-mpv7-image-final">
+/* VF MPV 7 supplied image — clean, large, sharp hero presentation */
+.hero-car-image-new{
+  display:block!important;
+  width:min(760px,100%)!important;
+  height:auto!important;
+  max-width:none!important;
+  max-height:555px!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  filter:saturate(1.04) contrast(1.03) brightness(1.02)!important;
+  transform:translateZ(0)!important;
+  image-rendering:auto!important;
+}
+.hero-car-interactive{
+  overflow:visible!important;
+  background:transparent!important;
+}
+@media(max-width:1100px){
+  .hero-car-image-new{width:min(700px,100%)!important;max-height:500px!important}
+}
+@media(max-width:800px){
+  .hero-car-image-new{width:100%!important;max-height:390px!important}
+}
+@media(max-width:600px){
+  .hero-car-image-new{width:100%!important;max-height:310px!important}
+}
+</style>
+
+
+<script id="unico-page-transition-js">
+(function(){
+  "use strict";
+  var overlay=document.getElementById("unicoPageTransition");
+  if(!overlay)return;
+  var root=document.documentElement, navigating=false, TRANSITION_MS=1120;
+
+  function hideLoader(){
+    overlay.classList.add("is-hidden");
+    overlay.setAttribute("aria-hidden","true");
+    root.classList.remove("unico-transition-lock");
+  }
+  function showLoader(){
+    overlay.classList.remove("is-hidden");
+    overlay.setAttribute("aria-hidden","false");
+    root.classList.add("unico-transition-lock");
+  }
+
+  root.classList.add("unico-transition-lock");
+  window.addEventListener("load",function(){setTimeout(hideLoader,1050)});
+  window.addEventListener("pageshow",function(e){if(e.persisted){navigating=false;hideLoader()}});
+
+  document.addEventListener("click",function(e){
+    var link=e.target.closest?e.target.closest("a[href]"):null;
+    if(!link||navigating)return;
+
+    var href=link.getAttribute("href");
+    if(!href||href.charAt(0)==="#"||/^(mailto:|tel:|javascript:|data:)/i.test(href))return;
+    if(link.target&&link.target!=="_self")return;
+    if(link.hasAttribute("download"))return;
+
+    var url;
+    try{url=new URL(href,window.location.href)}catch(err){return}
+    if(url.origin!==window.location.origin)return;
+    if(url.pathname===window.location.pathname&&!url.search&&!url.hash)return;
+
+    var ext=url.pathname.split(".").pop().toLowerCase();
+    if(ext&&ext!=="html"&&ext!=="htm")return;
+
+    e.preventDefault();
+    navigating=true;
+    showLoader();
+    setTimeout(function(){window.location.href=url.href},TRANSITION_MS);
+  },true);
+})();
+</script>
+
+</body>
+</html>
+
+<style>
+/* Final cleanup: one image per scroll scene */
+.motion-story{
+  padding-top:0 !important;
+}
+.motion-scene{
+  position:relative;
+}
+.motion-scene:first-of-type{
+  padding-top:85px;
+}
+.motion-media{
+  width:100%;
+}
+.motion-image-wrap{
+  position:relative;
+  inset:auto;
+  width:100%;
+  height:100%;
+}
+@media(max-width:850px){
+  .motion-scene:first-of-type{padding-top:65px}
+}
+
+/* =========================================================
+   FINAL NAVIGATION ALIGNMENT
+   ========================================================= */
+.nav-inner{
+  display:grid !important;
+  grid-template-columns:auto minmax(0,1fr) auto !important;
+  align-items:center !important;
+  gap:32px !important;
+}
+.nav-links{
+  position:static !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:30px !important;
+  height:80px !important;
+  flex:none !important;
+}
+.nav-links a{
+  position:relative !important;
+  display:flex !important;
+  align-items:center !important;
+  height:80px !important;
+  padding:0 !important;
+  white-space:nowrap;
+}
+.nav-links a::after{
+  bottom:20px !important;
+}
+.nav-button{
+  position:static !important;
+  transform:none !important;
+  justify-self:end !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  min-height:48px !important;
+  height:48px !important;
+  padding:0 19px !important;
+  margin:0 !important;
+  white-space:nowrap !important;
+}
+.mobile-menu{display:none !important;}
+
+@media(max-width:900px){
+  .nav-inner{
+    display:flex !important;
+    height:80px !important;
+    gap:15px !important;
+  }
+  .nav-links{
+    position:absolute !important;
+    top:80px !important;
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+    height:auto !important;
+    display:none !important;
+    flex-direction:column !important;
+    align-items:stretch !important;
+    justify-content:flex-start !important;
+    gap:0 !important;
+    background:#fff !important;
+    border-bottom:1px solid var(--line) !important;
+    padding:10px 24px 20px !important;
+  }
+  .nav-links.show{display:flex !important;}
+  .nav-links a{
+    height:auto !important;
+    padding:14px 0 !important;
+  }
+  .nav-links a::after{display:none !important;}
+  .nav-button{
+    margin-left:auto !important;
+    flex-shrink:0 !important;
+  }
+  .mobile-menu{
+    display:block !important;
+    border:0 !important;
+    background:none !important;
+    font-size:27px !important;
+    cursor:pointer !important;
+    order:3;
+  }
+}
+@media(max-width:600px){
+  .nav-inner{height:70px !important;}
+  .nav-links{top:70px !important;}
+  .nav-button{
+    min-height:44px !important;
+    height:44px !important;
+    padding:0 13px !important;
+    font-size:9px !important;
+  }
+}
+</style>
+
+<style id="unico-motion-footer-enhancement">
+/* =========================================================
+   VINFAST NAV TAG
+   ========================================================= */
+.nav-links .nav-vinfast{
+  display:inline-flex !important;
+  align-items:center !important;
+  gap:7px !important;
+  color:#111518 !important;
+  letter-spacing:1px !important;
+}
+.nav-links .nav-vinfast span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:25px;
+  height:16px;
+  padding:0 5px;
+  background:#f47b00;
+  color:#fff;
+  font:900 8px/1 "Inter",sans-serif;
+  letter-spacing:.8px;
+  border-radius:2px;
+  transition:.25s ease;
+}
+.nav-links .nav-vinfast::after{
+  background:#f47b00 !important;
+}
+.nav-links .nav-vinfast:hover span{
+  transform:translateY(-2px);
+  box-shadow:0 5px 12px rgba(244,123,0,.25);
+}
+
+/* =========================================================
+   HERO CAR — FULL CAR / NO BOX
+   ========================================================= */
+.hero .hero-photo-frame{
+  width:min(860px,64vw) !important;
+  height:540px !important;
+  border-radius:0 !important;
+  overflow:visible !important;
+  background:transparent !important;
+  box-shadow:none !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+.hero .hero-photo{
+  width:115% !important;
+  height:auto !important;
+  max-height:620px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  border:0 !important;
+  box-shadow:none !important;
+  /* Visually blends the photographic surroundings into the light hero. */
+  mix-blend-mode:normal !important;
+  clip-path:none !important;
+  -webkit-clip-path:none !important;
+  filter:saturate(1.12) contrast(1.06) brightness(1.02) !important;
+  transform:translate3d(0,4px,0) scale(1.01) !important;
+  animation:heroCarFloatHD 5.5s ease-in-out infinite !important;
+}
+@keyframes heroCarFloatHD{
+  0%,100%{transform:translate3d(0,5px,0) scale(1.01)}
+  50%{transform:translate3d(-9px,-7px,0) scale(1.035)}
+}
+.hero-visual{
+  overflow:visible !important;
+}
+.hero-visual::before{
+  content:"VINFAST";
+  position:absolute;
+  right:3%;
+  top:9%;
+  z-index:7;
+  padding:9px 14px;
+  background:#111518;
+  color:#fff;
+  font:900 10px/1 "Inter",sans-serif;
+  letter-spacing:2.2px;
+  box-shadow:0 10px 24px rgba(0,0,0,.14);
+  animation:vinfastBadge 3.5s ease-in-out infinite;
+}
+@keyframes vinfastBadge{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
+}
+
+/* =========================================================
+   SCROLL-TRIGGERED MINI CAR + WHEELS
+   Down scroll  = left → right
+   Up scroll    = right → left
+   ========================================================= */
+.scroll-road-car{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:13px;
+  height:48px;
+  z-index:9998;
+  pointer-events:none;
+  opacity:0;
+}
+.scroll-road-car::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:4px;
+  height:1px;
+  background:linear-gradient(90deg,transparent 0%,#d5dadd 12%,#d5dadd 88%,transparent 100%);
+}
+.road-car{
+  position:absolute;
+  left:-90px;
+  bottom:5px;
+  width:70px;
+  height:30px;
+  filter:drop-shadow(0 5px 4px rgba(0,0,0,.16));
+}
+.road-car-body{
+  position:absolute;
+  left:7px;
+  bottom:8px;
+  width:58px;
+  height:17px;
+  background:#f47b00;
+  border-radius:7px 10px 4px 4px;
+}
+.road-car-body::before{
+  content:"";
+  position:absolute;
+  left:15px;
+  top:-10px;
+  width:30px;
+  height:13px;
+  background:#111518;
+  clip-path:polygon(15% 100%,30% 0,73% 0,100% 100%);
+}
+.road-car-window{
+  position:absolute;
+  top:-8px;
+  width:12px;
+  height:8px;
+  background:#dfe8ed;
+  border:1px solid #111518;
+  z-index:2;
+}
+.road-car-window-a{left:20px;clip-path:polygon(18% 100%,28% 0,100% 0,100% 100%)}
+.road-car-window-b{left:34px;clip-path:polygon(0 0,72% 0,100% 100%,0 100%)}
+.road-car-light{
+  position:absolute;
+  right:-1px;
+  top:5px;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 8px rgba(255,255,255,.9);
+}
+.road-wheel{
+  position:absolute;
+  bottom:0;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#111518;
+  border:2px solid #707980;
+  display:grid;
+  place-items:center;
+  animation:wheelSpin .45s linear infinite;
+}
+.road-wheel i{
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:#f47b00;
+}
+.road-wheel-a{left:14px}
+.road-wheel-b{right:8px}
+@keyframes wheelSpin{to{transform:rotate(360deg)}}
+
+.scroll-road-car.is-driving{
+  opacity:1;
+}
+.scroll-road-car.is-driving .road-car{
+  animation:driveAcross 1.35s cubic-bezier(.25,.7,.35,1) forwards;
+}
+.scroll-road-car.is-driving.reverse .road-car{
+  animation:driveBack 1.35s cubic-bezier(.25,.7,.35,1) forwards;
+}
+@keyframes driveAcross{
+  0%{left:-90px}
+  100%{left:calc(100vw + 90px)}
+}
+@keyframes driveBack{
+  0%{left:calc(100vw + 90px)}
+  100%{left:-90px}
+}
+
+/* =========================================================
+   MODERN FOOTER — MATCHES SUPPLIED REFERENCE
+   ========================================================= */
+.footer{
+  position:relative;
+  background:#07090b !important;
+  color:#aeb7bd !important;
+  padding:72px 0 0 !important;
+  overflow:hidden;
+}
+.footer::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background:linear-gradient(90deg,#f47b00 0 19%,rgba(244,123,0,.18) 19% 100%);
+}
+.footer::after{
+  content:"UNICO";
+  position:absolute;
+  right:-10px;
+  bottom:30px;
+  color:rgba(255,255,255,.025);
+  font:900 clamp(120px,18vw,250px)/.7 "Barlow Condensed",sans-serif;
+  letter-spacing:-7px;
+  pointer-events:none;
+}
+.footer-grid-modern{
+  position:relative;
+  z-index:2;
+  grid-template-columns:1.55fr .72fr .72fr 1.45fr !important;
+  gap:58px !important;
+  align-items:start;
+}
+.footer-brand{max-width:440px}
+.footer-brand-logo{
+  display:flex;
+  align-items:center;
+  min-height:82px;
+  margin-bottom:14px;
+}
+.footer-logo-image{
+  width:min(375px,100%) !important;
+  height:auto !important;
+  object-fit:contain;
+  object-position:left center;
+}
+.footer-brand-line{
+  width:375px;
+  max-width:100%;
+  height:2px;
+  margin:8px 0 18px;
+  background:linear-gradient(90deg,#f47b00,#f47b00 34%,rgba(244,123,0,.18) 34%,rgba(244,123,0,.18) 100%);
+}
+.footer-brand p{max-width:450px;color:#aeb7bd !important;font-size:11px !important;line-height:1.9 !important}
+.footer-column{position:relative;display:flex;flex-direction:column;align-items:flex-start}
+.footer-column h3{color:#fff !important;font-size:25px !important;line-height:1 !important;margin-bottom:21px !important;letter-spacing:.2px}
+.footer-column h3::after{content:"";display:block;width:28px;height:2px;margin-top:10px;background:#f47b00}
+.footer-column > a{color:#aeb7bd !important;font-size:11px !important;line-height:1.8 !important;margin-bottom:7px;transition:.25s ease}
+.footer-column > a:hover{color:#f47b00 !important;transform:translateX(4px)}
+.footer-contact p{color:#aeb7bd !important;font-size:11px !important;line-height:1.75 !important;margin-bottom:15px;max-width:440px}
+.footer-contact > a{margin-bottom:6px !important}
+.footer-socials{display:flex;flex-wrap:wrap;gap:8px;margin-top:21px}
+.footer-socials a{display:inline-flex;align-items:center;justify-content:center;min-height:30px;padding:0 11px;border:1px solid #293137;color:#aeb7bd;font-size:9px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;transition:.25s ease}
+.footer-socials a:hover{background:#f47b00;border-color:#f47b00;color:#fff;transform:translateY(-2px)}
+.footer-bottom-modern{position:relative;z-index:2;margin-top:55px !important;padding:19px 0 20px !important;border-top:1px solid #252c31 !important;color:#7f8a91 !important;font-size:9px !important;letter-spacing:.15px}
+.footer-bottom-modern span:last-child{color:#aeb7bd}
+@media(max-width:1000px){.footer-grid-modern{grid-template-columns:1.5fr 1fr 1fr !important}.footer-contact{grid-column:1/-1}}
+@media(max-width:900px){.nav-links .nav-vinfast{justify-content:flex-start}}
+@media(max-width:800px){
+  .hero .hero-photo-frame{width:100% !important;height:390px !important}
+  .hero .hero-photo{width:118% !important;max-height:410px !important}
+  .hero-visual::before{right:4%;top:3%}
+  .footer-grid-modern{grid-template-columns:1fr 1fr !important;gap:40px !important}
+  .footer-contact{grid-column:auto}
+}
+@media(max-width:600px){
+  .hero .hero-photo-frame{height:290px !important}
+  .hero .hero-photo{width:125% !important;max-height:310px !important}
+  .hero-visual::before{font-size:8px;padding:8px 10px}
+  .footer-grid-modern{grid-template-columns:1fr !important;gap:32px !important}
+  .footer-contact{grid-column:auto}
+  .footer{padding-top:55px !important}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero .hero-photo,.hero-visual::before,.road-wheel{animation:none !important}
+}
+</style>
+
+<script id="unico-motion-footer-js">
+(function () {
+  const car = document.getElementById("scrollRoadCar");
+  if (!car) return;
+  const roadCar = car.querySelector(".road-car");
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduced) { car.style.opacity = "1"; roadCar.style.left = "0px"; return; }
+  let ticking = false;
+  function updateCarPosition() {
+    const scrollTop = window.scrollY || window.pageYOffset || 0;
+    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const progress = Math.max(0, Math.min(1, scrollTop / maxScroll));
+    const carWidth = roadCar.offsetWidth || 70;
+    const startX = -carWidth - 15;
+    const endX = window.innerWidth + 15;
+    roadCar.style.left = `${startX + (endX - startX) * progress}px`;
+    car.style.opacity = "1";
+    ticking = false;
+  }
+  function requestUpdate() {
+    if (!ticking) { requestAnimationFrame(updateCarPosition); ticking = true; }
+  }
+  window.addEventListener("scroll", requestUpdate, {passive:true});
+  window.addEventListener("resize", requestUpdate, {passive:true});
+  window.addEventListener("load", requestUpdate);
+  requestUpdate();
+})();
+</script>
+
+
+<!-- =========================================================
+     END OF PAGE CELEBRATION — triggers when the scroll car
+     reaches/crosses the right edge at the very end of the page
+     ========================================================= -->
+<style id="end-of-page-celebration">
+  .end-celebration{
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    display:grid;
+    place-items:center;
+    pointer-events:none;
+    opacity:0;
+    visibility:hidden;
+    transition:opacity .35s ease, visibility .35s ease;
+  }
+
+  .end-celebration.show{
+    opacity:1;
+    visibility:visible;
+  }
+
+  .end-celebration-backdrop{
+    position:absolute;
+    inset:0;
+    background:rgba(7,12,16,.22);
+    backdrop-filter:blur(2px);
+  }
+
+  .end-celebration-card{
+    position:relative;
+    z-index:2;
+    width:min(460px,calc(100% - 36px));
+    padding:34px 34px 30px;
+    text-align:center;
+    background:#fff;
+    border:1px solid #e1e5e8;
+    box-shadow:0 25px 80px rgba(0,0,0,.22);
+    transform:translateY(18px) scale(.94);
+    transition:transform .45s cubic-bezier(.22,.61,.36,1);
+  }
+
+  .end-celebration.show .end-celebration-card{
+    transform:translateY(0) scale(1);
+  }
+
+  .end-celebration-icon{
+    width:58px;
+    height:58px;
+    margin:0 auto 15px;
+    display:grid;
+    place-items:center;
+    border-radius:50%;
+    background:#f47b00;
+    color:#fff;
+    font-size:29px;
+    box-shadow:0 10px 28px rgba(244,123,0,.28);
+    animation:endPop .7s cubic-bezier(.175,.885,.32,1.275);
+  }
+
+  .end-celebration-card h2{
+    margin:0;
+    color:#111518;
+    font:900 clamp(42px,7vw,66px)/.88 "Barlow Condensed",sans-serif;
+    letter-spacing:-1px;
+    text-transform:uppercase;
+  }
+
+  .end-celebration-card h2 span{
+    color:#f47b00;
+  }
+
+  .end-celebration-card p{
+    margin:14px auto 0;
+    max-width:350px;
+    color:#68727a;
+    font:600 12px/1.7 "Inter",sans-serif;
+    letter-spacing:.15px;
+  }
+
+  .end-celebration-line{
+    width:54px;
+    height:3px;
+    margin:19px auto 0;
+    background:#f47b00;
+  }
+
+  /* End popup — booking CTA */
+  .end-thanks{
+    font-family:"Brush Script MT","Segoe Script","Lucida Handwriting",cursive !important;
+    font-size:19px !important;
+    font-weight:500 !important;
+    line-height:1.45 !important;
+    color:#4d555b !important;
+  }
+
+  .end-book-btn{
+    pointer-events:auto !important;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    width:100%;
+    min-height:52px;
+    margin-top:22px;
+    padding:0 18px;
+    background:#f47b00;
+    border:1px solid #f47b00;
+    color:#fff;
+    font:800 10px/1.2 "Inter",sans-serif;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    text-decoration:none;
+    transition:all .25s ease;
+    box-shadow:0 10px 24px rgba(244,123,0,.20);
+  }
+
+  .end-book-btn span{
+    font-size:20px;
+    line-height:1;
+    transition:transform .25s ease;
+  }
+
+  .end-book-btn:hover{
+    background:#111518;
+    border-color:#111518;
+    transform:translateY(-2px);
+    box-shadow:0 14px 30px rgba(17,21,24,.20);
+  }
+
+  .end-book-btn:hover span{
+    transform:translateX(5px);
+  }
+
+  @media(max-width:600px){
+    .end-thanks{
+      font-size:17px !important;
+    }
+
+    .end-book-btn{
+      min-height:50px;
+      padding:0 14px;
+      font-size:9px;
+      letter-spacing:.7px;
+    }
+  }
+
+  .end-confetti{
+    position:absolute;
+    left:50%;
+    top:50%;
+    z-index:3;
+    width:8px;
+    height:14px;
+    border-radius:2px;
+    opacity:0;
+    transform:translate(-50%,-50%);
+  }
+
+  .end-celebration.show .end-confetti{
+    animation:confettiBurst 1.35s cubic-bezier(.16,.72,.28,1) forwards;
+  }
+
+  .end-confetti:nth-child(1){--x:-210px;--y:-155px;--r:210deg;background:#f47b00}
+  .end-confetti:nth-child(2){--x:-150px;--y:-210px;--r:145deg;background:#111518}
+  .end-confetti:nth-child(3){--x:-70px;--y:-175px;--r:320deg;background:#e21a22}
+  .end-confetti:nth-child(4){--x:35px;--y:-215px;--r:70deg;background:#f47b00}
+  .end-confetti:nth-child(5){--x:120px;--y:-185px;--r:250deg;background:#111518}
+  .end-confetti:nth-child(6){--x:195px;--y:-135px;--r:125deg;background:#e21a22}
+  .end-confetti:nth-child(7){--x:-235px;--y:-45px;--r:285deg;background:#111518}
+  .end-confetti:nth-child(8){--x:235px;--y:-55px;--r:35deg;background:#f47b00}
+  .end-confetti:nth-child(9){--x:-190px;--y:65px;--r:160deg;background:#e21a22}
+  .end-confetti:nth-child(10){--x:185px;--y:75px;--r:300deg;background:#111518}
+  .end-confetti:nth-child(11){--x:-120px;--y:145px;--r:55deg;background:#f47b00}
+  .end-confetti:nth-child(12){--x:110px;--y:150px;--r:210deg;background:#e21a22}
+
+  @keyframes confettiBurst{
+    0%{
+      opacity:1;
+      transform:translate(-50%,-50%) translate(0,0) rotate(0);
+    }
+    100%{
+      opacity:0;
+      transform:translate(-50%,-50%) translate(var(--x),var(--y)) rotate(var(--r));
+    }
+  }
+
+  @keyframes endPop{
+    0%{transform:scale(.45) rotate(-12deg)}
+    65%{transform:scale(1.12) rotate(4deg)}
+    100%{transform:scale(1) rotate(0)}
+  }
+
+  @media(max-width:600px){
+    .end-celebration-card{
+      padding:28px 22px 25px;
+    }
+    .end-celebration-card h2{
+      font-size:48px;
+    }
+    .end-confetti:nth-child(1){--x:-120px;--y:-120px}
+    .end-confetti:nth-child(2){--x:-85px;--y:-155px}
+    .end-confetti:nth-child(3){--x:-40px;--y:-135px}
+    .end-confetti:nth-child(4){--x:45px;--y:-155px}
+    .end-confetti:nth-child(5){--x:90px;--y:-125px}
+    .end-confetti:nth-child(6){--x:125px;--y:-90px}
+    .end-confetti:nth-child(7){--x:-130px;--y:-35px}
+    .end-confetti:nth-child(8){--x:130px;--y:-35px}
+    .end-confetti:nth-child(9){--x:-105px;--y:65px}
+    .end-confetti:nth-child(10){--x:105px;--y:65px}
+    .end-confetti:nth-child(11){--x:-65px;--y:115px}
+    .end-confetti:nth-child(12){--x:65px;--y:115px}
+  }
+
+  @media(prefers-reduced-motion:reduce){
+    .end-celebration,
+    .end-celebration-card,
+    .end-celebration-icon,
+    .end-celebration.show .end-confetti{
+      animation:none!important;
+      transition:none!important;
+    }
+  }
+</style>
+
+<div class="end-celebration" id="endCelebration" aria-hidden="true">
+  <div class="end-celebration-backdrop"></div>
+
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+  <span class="end-confetti"></span>
+
+  <div class="end-celebration-card" role="status" aria-live="polite">
+    <div class="end-celebration-icon">✓</div>
+    <h2>You Have<br>Reached <span>The End</span></h2>
+    <p class="end-thanks">Thanks for taking the full ride through UNICO MOTORS.</p>
+    <div class="end-celebration-line"></div>
+
+    <a href="./contact.html" class="end-book-btn" id="endBookAppointment" role="button" onclick="window.location.href='./contact.html'; return false;">
+      Let’s Schedule a Car Booking Appointment
+      <span>→</span>
+    </a>
+  </div>
+</div>
+
+<script id="end-of-page-celebration-js">
+
+(function(){
+  const car = document.getElementById("scrollRoadCar");
+  const celebration = document.getElementById("endCelebration");
+  if(!car || !celebration) return;
+
+
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let endShown = false;
+
+  function checkPageEnd(){
+    const scrollTop = window.scrollY || window.pageYOffset || 0;
+    const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+    const progress = Math.max(0, Math.min(1, scrollTop / maxScroll));
+
+    // Show only when the scroll car has reached the final ~1.5% of the page.
+    if(progress >= 0.985 && !endShown){
+      endShown = true;
+      celebration.classList.add("show");
+      celebration.setAttribute("aria-hidden","false");
+
+      // Keep the celebration visible briefly, then fade it out.
+      window.clearTimeout(celebration._hideTimer);
+      celebration._hideTimer = window.setTimeout(function(){
+        celebration.classList.remove("show");
+        celebration.setAttribute("aria-hidden","true");
+      }, 3600);
+    }
+
+    // Reset after moving away from the bottom so it can celebrate again.
+    if(progress < 0.94 && endShown){
+      endShown = false;
+      celebration.classList.remove("show");
+      celebration.setAttribute("aria-hidden","true");
+    }
+  }
+
+  if(reduced){
+    // Still show the end message, but without the animated burst.
+    window.addEventListener("scroll", checkPageEnd, {passive:true});
+    window.addEventListener("resize", checkPageEnd);
+    window.addEventListener("load", checkPageEnd);
+    checkPageEnd();
+    return;
+  }
+
+  window.addEventListener("scroll", checkPageEnd, {passive:true});
+  window.addEventListener("resize", checkPageEnd);
+  window.addEventListener("load", checkPageEnd);
+  checkPageEnd();
+})();
+</script>

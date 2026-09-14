@@ -1,0 +1,2276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>
+      What’s the Best Time to Schedule Your Car’s Tune-Up? | UNICO MOTORS
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --orange: #f47b00;
+        --orange2: #ff922b;
+        --dark: #111b22;
+        --dark2: #1c2a33;
+        --ink: #10181f;
+        --text: #4d5a63;
+        --muted: #7b858c;
+        --line: #e3e7e9;
+        --soft: #f5f7f8;
+        --white: #fff;
+        --blue: #1769d2;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: #fff;
+        color: var(--ink);
+        font-family: Inter, Arial, sans-serif;
+        overflow-x: hidden;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        max-width: 100%;
+        display: block;
+      }
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      .container {
+        width: min(1240px, 88%);
+        margin: auto;
+      }
+
+      /* ================= NAV ================= */
+      .utility {
+        height: 36px;
+        background: var(--dark);
+        color: #aeb8be;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 26px;
+        padding: 0 6%;
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .utility a:hover {
+        color: #fff;
+      }
+
+      .nav {
+        height: 86px;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: 240px 1fr auto;
+        align-items: center;
+        gap: 25px;
+        padding: 0 6%;
+        position: relative;
+        z-index: 50;
+      }
+      .logo {
+        width: 225px;
+        height: 62px;
+        object-fit: contain;
+        object-position: left center;
+      }
+      .links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 31px;
+      }
+      .links a {
+        position: relative;
+        padding: 33px 0;
+        font-size: 12px;
+        font-weight: 800;
+        color: #26333c;
+        text-transform: uppercase;
+      }
+      .links a:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 25px;
+        height: 2px;
+        background: var(--orange);
+        transform: scaleX(0);
+        transition: 0.25s ease;
+      }
+      .links a:hover:after,
+      .links a.active:after {
+        transform: scaleX(1);
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .nav-cta {
+        height: 44px;
+        min-width: 140px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--orange);
+        color: #fff;
+        font: 800 18px/1 "Barlow Condensed";
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+      .nav-cta:hover {
+        background: #d96500;
+      }
+      .menu {
+        display: none;
+        width: 30px;
+        height: 22px;
+        border: 0;
+        background: none;
+        padding: 0;
+        position: relative;
+      }
+      .menu span,
+      .menu:before,
+      .menu:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 28px;
+        height: 2px;
+        background: var(--orange);
+      }
+      .menu:before {
+        top: 0;
+      }
+      .menu span {
+        top: 10px;
+      }
+      .menu:after {
+        top: 20px;
+      }
+
+      /* ================= CLEAN EDITORIAL HERO ================= */
+      .hero {
+        position: relative;
+        overflow: hidden;
+        min-height: 535px;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 31%;
+        height: 4px;
+        background: var(--orange);
+      }
+
+      .hero-grid {
+        min-height: 535px;
+        display: grid;
+        grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+        align-items: center;
+        gap: 65px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-content {
+        padding: 72px 0;
+        max-width: 760px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 11px;
+        color: var(--orange);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        margin-bottom: 21px;
+      }
+
+      .eyebrow:before {
+        content: "";
+        width: 35px;
+        height: 2px;
+        background: var(--orange);
+      }
+
+      .hero h1 {
+        margin: 0;
+        max-width: 780px;
+        font: 800 clamp(57px, 6.2vw, 88px)/0.88 "Barlow Condensed";
+        letter-spacing: -0.035em;
+        text-transform: uppercase;
+        color: #11181e;
+      }
+
+      .hero h1 .accent {
+        color: var(--orange);
+        display: block;
+      }
+
+      .hero-meta {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 11px;
+        margin-top: 27px;
+        color: #7b858c;
+        font-size: 10px;
+        font-weight: 600;
+      }
+
+      .hero-meta b {
+        color: #18232a;
+      }
+
+      .hero-meta .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #c7cccf;
+      }
+
+      .hero-description {
+        max-width: 610px;
+        margin-top: 22px;
+        padding-top: 17px;
+        border-top: 1px solid #e5e8ea;
+        color: #68747c;
+        font-size: 12px;
+        line-height: 1.75;
+      }
+
+      .hero-read {
+        display: inline-flex;
+        align-items: center;
+        gap: 14px;
+        margin-top: 27px;
+        padding: 14px 19px;
+        background: var(--orange);
+        color: #fff;
+        font: 800 18px/1 "Barlow Condensed";
+        text-transform: uppercase;
+        letter-spacing: 0.02em;
+        transition: 0.25s ease;
+      }
+
+      .hero-read span {
+        font-size: 19px;
+        transition: transform 0.25s ease;
+      }
+      .hero-read:hover {
+        background: #11181e;
+      }
+      .hero-read:hover span {
+        transform: translateX(4px);
+      }
+
+      .hero-visual {
+        min-height: 410px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-visual:before {
+        content: "";
+        position: absolute;
+        width: 365px;
+        height: 365px;
+        right: 15px;
+        top: 28px;
+        border-radius: 50%;
+        background: #f6f7f8;
+      }
+
+      .hero-visual:after {
+        content: "";
+        position: absolute;
+        right: 42px;
+        top: 56px;
+        width: 76px;
+        height: 76px;
+        border-top: 2px solid var(--orange);
+        border-right: 2px solid var(--orange);
+        opacity: 0.9;
+      }
+
+      .hero-photo {
+        position: relative;
+        z-index: 2;
+        width: min(440px, 100%);
+        height: 330px;
+        object-fit: cover;
+        object-position: center;
+        border: 0;
+        box-shadow: 0 24px 55px rgba(15, 25, 32, 0.12);
+      }
+
+      .hero-stamp {
+        position: absolute;
+        z-index: 4;
+        left: 0;
+        top: 43px;
+        width: 88px;
+        height: 88px;
+        border: 1px solid #dfe3e5;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        color: #5e6971;
+        background: #fff;
+        font: 800 11px/1.05 "Barlow Condensed";
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        box-shadow: 0 12px 28px rgba(15, 25, 32, 0.07);
+      }
+
+      .hero-stamp span {
+        display: block;
+        font-size: 7px;
+        letter-spacing: 0.12em;
+        color: var(--orange);
+      }
+
+      .hero-info {
+        position: absolute;
+        z-index: 5;
+        right: -7px;
+        bottom: 22px;
+        width: 210px;
+        padding: 16px 18px;
+        background: #fff;
+        border-left: 3px solid var(--orange);
+        box-shadow: 0 15px 35px rgba(15, 25, 32, 0.1);
+        color: #17232b;
+      }
+
+      .hero-info small {
+        display: block;
+        color: var(--orange);
+        font-size: 8px;
+        font-weight: 800;
+        letter-spacing: 0.13em;
+        text-transform: uppercase;
+      }
+
+      .hero-info strong {
+        display: block;
+        margin-top: 5px;
+        font: 800 23px/0.95 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+
+      .hero-info p {
+        margin: 7px 0 0;
+        color: #768188;
+        font-size: 9px;
+        line-height: 1.5;
+      }
+
+      .hero-number {
+        position: absolute;
+        z-index: 1;
+        right: -4px;
+        top: 2px;
+        color: #f0f2f3;
+        font: 900 145px/0.8 "Barlow Condensed";
+        pointer-events: none;
+      }
+
+      @media (max-width: 1100px) {
+        .hero-grid {
+          grid-template-columns: minmax(0, 1fr) 410px;
+          gap: 35px;
+        }
+        .hero h1 {
+          font-size: clamp(54px, 6vw, 78px);
+        }
+        .hero-photo {
+          width: 380px;
+          height: 300px;
+        }
+        .hero-visual:before {
+          width: 330px;
+          height: 330px;
+          right: 8px;
+        }
+      }
+
+      @media (max-width: 850px) {
+        .hero {
+          min-height: 700px;
+        }
+        .hero-grid {
+          min-height: 700px;
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .hero-content {
+          padding: 62px 0 20px;
+        }
+        .hero h1 {
+          max-width: 680px;
+          font-size: 64px;
+        }
+        .hero-visual {
+          min-height: 330px;
+          align-self: end;
+        }
+        .hero-visual:before {
+          width: 300px;
+          height: 300px;
+          right: calc(50% - 170px);
+          top: 10px;
+        }
+        .hero-photo {
+          width: 330px;
+          height: 250px;
+        }
+        .hero-stamp {
+          left: calc(50% - 205px);
+          top: 25px;
+        }
+        .hero-info {
+          right: calc(50% - 205px);
+          bottom: 4px;
+        }
+        .hero-number {
+          right: calc(50% - 195px);
+          top: 0;
+          font-size: 110px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero {
+          min-height: 650px;
+        }
+        .hero-grid {
+          min-height: 650px;
+        }
+        .hero-content {
+          padding: 48px 0 8px;
+        }
+        .hero h1 {
+          font-size: 50px;
+        }
+        .hero-meta {
+          font-size: 9px;
+          gap: 8px;
+        }
+        .hero-description {
+          font-size: 11px;
+          margin-top: 18px;
+        }
+        .hero-read {
+          margin-top: 22px;
+        }
+        .hero-visual {
+          min-height: 285px;
+        }
+        .hero-photo {
+          width: 285px;
+          height: 215px;
+        }
+        .hero-visual:before {
+          width: 250px;
+          height: 250px;
+          right: calc(50% - 145px);
+        }
+        .hero-visual:after {
+          right: calc(50% - 142px);
+          top: 24px;
+          width: 55px;
+          height: 55px;
+        }
+        .hero-stamp {
+          left: calc(50% - 170px);
+          top: 13px;
+          width: 67px;
+          height: 67px;
+          font-size: 9px;
+        }
+        .hero-info {
+          right: calc(50% - 170px);
+          bottom: 0;
+          width: 175px;
+          padding: 12px 13px;
+        }
+        .hero-info strong {
+          font-size: 19px;
+        }
+        .hero-number {
+          right: calc(50% - 165px);
+          top: 0;
+          font-size: 82px;
+        }
+      }
+
+      /* ================= ARTICLE AREA ================= */
+      .blog-section {
+        padding: 82px 0 105px;
+        background: #fff;
+      }
+      .blog-layout {
+        display: grid;
+        grid-template-columns: 290px minmax(0, 1fr);
+        gap: 65px;
+        align-items: start;
+      }
+      .sidebar {
+        position: sticky;
+        top: 22px;
+      }
+      .side-card {
+        background: #f4f6f7;
+        border: 1px solid #e2e6e8;
+        padding: 22px;
+        margin-bottom: 15px;
+      }
+      .side-card:before {
+        content: "";
+        display: block;
+        width: 34px;
+        height: 3px;
+        background: var(--orange);
+        margin-bottom: 13px;
+      }
+      .side-title {
+        margin: 0 0 15px;
+        font: 800 25px/1 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .search {
+        display: flex;
+        height: 46px;
+        background: #fff;
+        border: 1px solid #dce1e4;
+      }
+      .search input {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+        outline: 0;
+        padding: 0 12px;
+        font-size: 12px;
+      }
+      .search button {
+        width: 46px;
+        border: 0;
+        background: var(--orange);
+        color: #fff;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .category-list {
+        display: grid;
+        gap: 5px;
+      }
+      .category {
+        min-height: 43px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 11px;
+        background: #fff;
+        font-size: 11px;
+        font-weight: 700;
+        border-left: 2px solid transparent;
+        transition: 0.2s;
+      }
+      .category:hover {
+        border-left-color: var(--orange);
+        padding-left: 14px;
+      }
+      .category span {
+        color: #8d969d;
+      }
+      .recent-list {
+        display: grid;
+        gap: 15px;
+      }
+      .recent {
+        display: grid;
+        grid-template-columns: 65px 1fr;
+        gap: 10px;
+      }
+      .recent img {
+        width: 65px;
+        height: 72px;
+        object-fit: cover;
+      }
+      .recent strong {
+        font: 700 15px/1.02 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .recent small {
+        display: block;
+        margin-top: 6px;
+        color: #8a949b;
+        font-size: 9px;
+      }
+      .recent small b {
+        color: var(--orange);
+      }
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+      .tag {
+        padding: 7px 8px;
+        background: #fff;
+        color: #68747c;
+        font-size: 9px;
+        font-weight: 700;
+      }
+
+      /* ================= ARTICLE ================= */
+      .article {
+        min-width: 0;
+        max-width: 900px;
+      }
+      .article-head {
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 33px;
+      }
+      .article-label {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--orange-dark);
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+      .article-label:before {
+        content: "";
+        width: 28px;
+        height: 2px;
+        background: var(--orange);
+      }
+      .article-title {
+        margin: 15px 0 0;
+        font: 800 clamp(40px, 4.3vw, 67px)/0.91 "Barlow Condensed";
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+      }
+      .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+        color: #7a858c;
+        font-size: 10px;
+        font-weight: 600;
+      }
+      .article-meta .dot {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #c2c7ca;
+        margin-top: 4px;
+      }
+      .article p {
+        margin: 0 0 20px;
+        color: var(--text);
+        font-size: 15px;
+        line-height: 1.85;
+      }
+      .article .lead {
+        color: #29363f;
+        font-size: 18px;
+        line-height: 1.72;
+        font-weight: 500;
+      }
+      .article .lead:first-letter {
+        float: left;
+        color: var(--orange);
+        padding: 7px 7px 0 0;
+        font: 900 63px/0.7 "Barlow Condensed";
+      }
+      .article h2 {
+        margin: 55px 0 20px;
+        font: 800 36px/0.92 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .filter-row,
+      .reason {
+        display: grid;
+        grid-template-columns: 205px 1fr;
+        gap: 28px;
+        padding: 21px 0;
+        border-top: 1px solid #edf0f1;
+      }
+      .filter-name,
+      .reason-title {
+        position: relative;
+        padding-left: 18px;
+        font-size: 12px;
+        font-weight: 800;
+        line-height: 1.45;
+      }
+      .filter-name:before,
+      .reason-title:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--blue);
+      }
+      .filter-row p,
+      .reason p {
+        margin: 0;
+      }
+      .quote {
+        position: relative;
+        margin: 48px 0;
+        padding: 31px 40px 28px 59px;
+        background: #f1f4f5;
+        border-left: 4px solid var(--orange);
+      }
+      .quote-mark {
+        position: absolute;
+        left: 18px;
+        top: 17px;
+        width: 28px;
+        opacity: 0.17;
+      }
+      .quote p {
+        margin: 0 0 15px;
+        color: #1b2830;
+        font-size: 17px;
+        line-height: 1.6;
+        font-weight: 700;
+      }
+      .quote-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font: 700 20px/1 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .quote-author:before {
+        content: "";
+        width: 34px;
+        height: 2px;
+        background: var(--orange);
+      }
+      .feature-image {
+        width: 100%;
+        aspect-ratio: 2.05/1;
+        object-fit: cover;
+        margin: 42px 0 48px;
+      }
+      .signs {
+        display: grid;
+        gap: 11px;
+        margin: 18px 0 40px;
+      }
+      .sign {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        color: #56616d;
+        font-size: 14px;
+      }
+      .sign b {
+        width: 18px;
+        height: 18px;
+        flex: 0 0 18px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: var(--dark);
+        color: #fff;
+        font-size: 9px;
+      }
+      .tags-share {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding: 18px 0;
+        margin-top: 45px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+        font-size: 11px;
+      }
+      .article-tag {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 8px 11px;
+        background: #f0f2f3;
+        font-size: 9px;
+        font-weight: 700;
+      }
+      .share {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .share b {
+        font: 700 20px/1 "Barlow Condensed";
+        text-transform: uppercase;
+        margin-right: 4px;
+      }
+      .share a {
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #36569b;
+        color: #fff;
+        font-size: 9px;
+        font-weight: 800;
+      }
+      .share a:nth-child(3) {
+        background: #222;
+      }
+      .share a:nth-child(4) {
+        background: #d80029;
+      }
+      .share a:nth-child(5) {
+        background: #0782ad;
+      }
+      .author-card {
+        margin-top: 40px;
+        padding: 23px 27px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        background: #eef4ff;
+        border-left: 4px solid var(--blue);
+      }
+      .avatar {
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        background: #c8cdd0;
+        border: 4px solid #fff;
+        position: relative;
+        flex: 0 0 auto;
+      }
+      .avatar:before {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #fff;
+        left: 21px;
+        top: 12px;
+      }
+      .avatar:after {
+        content: "";
+        position: absolute;
+        width: 48px;
+        height: 27px;
+        border-radius: 50% 50% 45% 45%;
+        background: #fff;
+        left: 9px;
+        bottom: 9px;
+      }
+      .author-name {
+        font: 700 26px/1 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .comment-box {
+        margin-top: 40px;
+        padding: 35px 38px 40px;
+        background: #f3f5f6;
+      }
+      .comment-box h2 {
+        margin-top: 0;
+      }
+      .form-grid {
+        display: grid;
+        gap: 16px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 9px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 13px;
+        border: 1px solid #d2d7da;
+        background: #fff;
+        outline: 0;
+        font-size: 12px;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        border-color: var(--orange);
+      }
+      .form-group textarea {
+        min-height: 140px;
+        resize: vertical;
+      }
+      .submit {
+        width: max-content;
+        border: 0;
+        background: var(--orange);
+        color: #fff;
+        padding: 14px 23px;
+        font: 800 18px/1 "Barlow Condensed";
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .submit:hover {
+        background: #d96500;
+      }
+
+      /* ================= CTA ================= */
+      .final-cta {
+        position: relative;
+        overflow: hidden;
+        background: var(--orange);
+        color: #fff;
+        padding: 62px 0;
+      }
+      .final-cta:after {
+        content: "";
+        position: absolute;
+        right: -130px;
+        top: -180px;
+        width: 430px;
+        height: 430px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        box-shadow:
+          0 0 0 40px rgba(255, 255, 255, 0.07),
+          0 0 0 80px rgba(255, 255, 255, 0.05);
+      }
+      .cta-inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 35px;
+      }
+      .cta-inner h2 {
+        margin: 0;
+        font: 800 clamp(38px, 5vw, 65px)/0.9 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .cta-inner p {
+        max-width: 470px;
+        margin: 9px 0 0;
+        color: #fff2e6;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+      .cta-button {
+        flex: 0 0 auto;
+        background: var(--dark);
+        color: #fff;
+        padding: 16px 27px;
+        font: 800 19px/1 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      .cta-button:hover {
+        background: #fff;
+        color: var(--dark);
+      }
+
+      /* ================= FOOTER ================= */
+      footer {
+        background: #0b1117;
+        color: #fff;
+        padding: 60px 0 23px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.3fr 0.8fr 0.9fr;
+        gap: 65px;
+      }
+      .footer-logo {
+        width: 245px;
+        height: 68px;
+        object-fit: contain;
+        object-position: left center;
+        margin-bottom: 14px;
+      }
+      footer p,
+      footer a {
+        color: #aeb7bf;
+        font-size: 11px;
+        line-height: 1.8;
+      }
+      footer p {
+        margin: 0 0 9px;
+      }
+      footer h3 {
+        margin: 0 0 16px;
+        font: 700 23px/1 "Barlow Condensed";
+        text-transform: uppercase;
+      }
+      footer a {
+        display: block;
+        margin: 7px 0;
+      }
+      footer a:hover {
+        color: #fff;
+      }
+      .footer-bottom {
+        margin-top: 28px;
+        padding-top: 16px;
+        border-top: 1px solid #29323a;
+        color: #7e8992;
+        font-size: 9px;
+        letter-spacing: 0.05em;
+      }
+
+      /* ================= REVEAL ================= */
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+      .js .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .js .reveal.show {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ================= RESPONSIVE ================= */
+      @media (max-width: 1100px) {
+        .nav {
+          grid-template-columns: 205px 1fr auto;
+          padding: 0 4%;
+        }
+        .logo {
+          width: 200px;
+        }
+        .links {
+          gap: 19px;
+        }
+        .container {
+          width: 91%;
+        }
+        .hero-grid {
+          grid-template-columns: 56% 44%;
+        }
+        .hero-left {
+          width: 59%;
+        }
+        .hero-content {
+          padding-right: 35px;
+        }
+        .hero-photo {
+          width: 350px;
+          height: 275px;
+        }
+        .blog-layout {
+          gap: 35px;
+          grid-template-columns: 270px minmax(0, 1fr);
+        }
+      }
+      @media (max-width: 850px) {
+        .utility {
+          padding: 0 4%;
+          gap: 15px;
+        }
+        .nav {
+          grid-template-columns: 1fr auto;
+          height: 76px;
+        }
+        .links {
+          display: none;
+        }
+        .menu {
+          display: block;
+        }
+        .hero {
+          min-height: 670px;
+        }
+        .hero-left {
+          width: 100%;
+          height: 68%;
+          bottom: auto;
+          clip-path: polygon(0 0, 100% 0, 100% 87%, 0 100%);
+        }
+        .hero-orange {
+          width: 100%;
+          height: 42%;
+          top: auto;
+          bottom: 0;
+          clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          min-height: 670px;
+        }
+        .hero-content {
+          padding: 65px 0 25px;
+          align-self: start;
+        }
+        .hero h1 {
+          max-width: 700px;
+          font-size: 64px;
+        }
+        .hero-visual {
+          min-height: 270px;
+          align-self: end;
+        }
+        .hero-photo {
+          right: 4%;
+          top: 45%;
+          width: 300px;
+          height: 220px;
+        }
+        .hero-stamp {
+          left: 5%;
+          top: 13%;
+          width: 95px;
+          height: 95px;
+          font-size: 11px;
+        }
+        .hero-info {
+          right: 5%;
+          bottom: 7%;
+          width: 210px;
+        }
+        .hero-number {
+          right: 1%;
+          top: 5%;
+          font-size: 130px;
+        }
+        .blog-section {
+          padding: 55px 0 75px;
+        }
+        .blog-layout {
+          grid-template-columns: 1fr;
+        }
+        .sidebar {
+          position: relative;
+          top: auto;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 14px;
+        }
+        .side-card {
+          margin: 0;
+        }
+        .side-card:first-child {
+          grid-column: 1/-1;
+        }
+        .article {
+          max-width: none;
+        }
+        .cta-inner {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 600px) {
+        .utility {
+          display: none;
+        }
+        .nav {
+          height: 70px;
+        }
+        .logo {
+          width: 185px;
+          height: 54px;
+        }
+        .nav-cta {
+          min-width: 112px;
+          height: 41px;
+          font-size: 16px;
+        }
+        .hero {
+          min-height: 560px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          min-height: 560px;
+        }
+        .hero-content {
+          padding: 48px 0 20px;
+        }
+        .hero h1 {
+          font-size: 50px;
+        }
+        .hero-description {
+          font-size: 11px;
+          margin-top: 20px;
+        }
+        .hero-meta {
+          font-size: 9px;
+        }
+        .hero-visual {
+          min-height: 220px;
+        }
+        .hero-photo {
+          width: 250px;
+          height: 180px;
+        }
+        .hero-stamp {
+          left: calc(50% - 155px);
+          top: 18px;
+          width: 68px;
+          height: 68px;
+        }
+        .hero-info {
+          right: calc(50% - 155px);
+          bottom: 0;
+          width: 185px;
+          padding: 13px;
+        }
+        .hero-info strong {
+          font-size: 21px;
+        }
+        .hero-number {
+          font-size: 90px;
+          right: calc(50% - 155px);
+          top: 0;
+        }
+        .sidebar {
+          grid-template-columns: 1fr;
+        }
+        .side-card:first-child {
+          grid-column: auto;
+        }
+        .article-title {
+          font-size: 45px;
+        }
+        .article p {
+          font-size: 14px;
+        }
+        .article .lead {
+          font-size: 16px;
+        }
+        .article h2 {
+          font-size: 31px;
+        }
+        .filter-row,
+        .reason {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+        .feature-image {
+          aspect-ratio: 1.35/1;
+        }
+        .tags-share {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .comment-box {
+          padding: 27px 19px 31px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+          gap: 35px;
+        }
+        .footer-logo {
+          width: 205px;
+        }
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <style id="final-centered-hero-fix">
+      .hero {
+        min-height: 535px !important;
+        background: #fff !important;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .hero:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 31%;
+        height: 4px;
+        background: var(--orange);
+      }
+
+      .hero-grid {
+        width: min(980px, 88%);
+        min-height: 535px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+
+      .hero-content {
+        width: 100%;
+        max-width: 850px !important;
+        margin: 0 auto !important;
+        padding: 72px 0 !important;
+      }
+
+      .hero h1 {
+        max-width: 850px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .eyebrow {
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-meta {
+        justify-content: center;
+      }
+
+      .hero-description {
+        max-width: 650px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .hero-read {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      .hero-visual {
+        display: none !important;
+      }
+
+      @media (max-width: 850px) {
+        .hero,
+        .hero-grid {
+          min-height: 500px !important;
+        }
+        .hero-grid {
+          width: 90%;
+        }
+        .hero-content {
+          padding: 58px 0 !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .hero,
+        .hero-grid {
+          min-height: 460px !important;
+        }
+        .hero-content {
+          padding: 48px 0 !important;
+        }
+        .hero h1 {
+          font-size: 50px !important;
+        }
+      }
+    </style>
+  
+<style id="unico-home-logo-sizing">
+.unico-logo-image{width:100%;max-width:255px;height:auto;object-fit:contain;}
+.logo img{max-height:62px;}
+.footer-logo{display:block;}
+.footer-logo img{width:230px;max-width:100%;height:auto;}
+.footer-brand-logo img{width:230px;max-width:100%;height:auto;}
+</style>
+
+<style id="unico-page-transition-css">
+html.unico-transition-lock,html.unico-transition-lock body{overflow:hidden!important}
+#unicoPageTransition{position:fixed;inset:0;z-index:2147483647;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 45%,rgba(255,111,0,.10),transparent 34%),#0b0b0c;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .42s ease,visibility .42s ease}
+#unicoPageTransition.is-hidden{opacity:0;visibility:hidden;pointer-events:none}
+.unico-loader-stage{position:relative;width:min(760px,88vw);height:190px;overflow:hidden}
+.unico-loader-road{position:absolute;left:0;right:0;bottom:38px;height:2px;background:rgba(255,255,255,.16)}
+.unico-loader-road:after{content:"";position:absolute;left:0;right:0;top:13px;height:1px;background:repeating-linear-gradient(90deg,rgba(255,111,0,0) 0 34px,rgba(255,111,0,.45) 34px 66px);animation:unicoRoad 1.05s linear infinite}
+.unico-loader-car{position:absolute;left:-190px;bottom:44px;width:170px;height:86px;filter:drop-shadow(0 13px 13px rgba(0,0,0,.55));animation:unicoDrive 1.15s cubic-bezier(.55,.05,.22,1) forwards}
+.unico-car-body{position:absolute;left:14px;bottom:17px;width:137px;height:39px;background:linear-gradient(135deg,#ff8a2a 0%,#ff5a00 55%,#d93400 100%);border-radius:18px 29px 10px 9px;box-shadow:inset -10px -7px 0 rgba(0,0,0,.12),inset 8px 5px 0 rgba(255,255,255,.12)}
+.unico-car-body:before{content:"";position:absolute;left:34px;top:-25px;width:69px;height:32px;background:linear-gradient(135deg,#24272a,#111315);clip-path:polygon(20% 100%,35% 0,73% 0,100% 100%);border-radius:10px 10px 2px 2px;box-shadow:inset 0 2px 0 rgba(255,255,255,.18)}
+.unico-car-window{position:absolute;left:43px;top:-20px;width:54px;height:20px;background:linear-gradient(135deg,rgba(210,235,245,.65),rgba(55,72,80,.92));clip-path:polygon(18% 100%,31% 5%,67% 5%,92% 100%);border-top:1px solid rgba(255,255,255,.45)}
+.unico-car-bumper{position:absolute;right:-3px;bottom:22px;width:18px;height:9px;border-radius:0 7px 7px 0;background:#151515}
+.unico-car-light{position:absolute;right:10px;top:13px;width:9px;height:8px;border-radius:50%;background:#fff2cf;box-shadow:0 0 14px 5px rgba(255,196,84,.35)}
+.unico-car-wheel{position:absolute;bottom:0;width:30px;height:30px;border-radius:50%;background:#101112;border:5px solid #2a2b2d;box-shadow:inset 0 0 0 4px #090a0b;animation:unicoWheel .27s linear infinite}
+.unico-car-wheel:after{content:"";position:absolute;inset:7px;border-radius:50%;background:#aeb2b5;box-shadow:0 0 0 2px #56595c}
+.unico-car-wheel.left{left:31px}.unico-car-wheel.right{right:18px}
+.unico-loader-label{position:absolute;left:50%;bottom:4px;transform:translateX(-50%);font-family:Inter,Arial,sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.64);white-space:nowrap}
+.unico-loader-label span{color:#ff6b00}
+@keyframes unicoDrive{0%{transform:translateX(0) scale(.92);opacity:0}8%{opacity:1}72%{transform:translateX(calc(50vw + 30px)) scale(1);opacity:1}100%{transform:translateX(calc(100vw + 250px)) scale(1.02);opacity:1}}
+@keyframes unicoWheel{to{transform:rotate(360deg)}}
+@keyframes unicoRoad{to{background-position:-66px 0}}
+@media(max-width:600px){.unico-loader-stage{height:160px}.unico-loader-car{transform:scale(.78);transform-origin:left bottom}.unico-loader-label{font-size:9px;letter-spacing:2px}}
+@media(prefers-reduced-motion:reduce){.unico-loader-car{animation-duration:.45s}.unico-loader-road:after,.unico-car-wheel{animation:none}}
+</style>
+
+
+<style id="shared-vinfast-section">
+/* ===== VINFAST FEATURE — CLEAN WHITE EDITORIAL SECTION ===== */
+.vinfast-section{
+  position:relative;
+  overflow:hidden;
+  background:#fff;
+  color:#101418;
+  padding:100px 0;
+  border-top:1px solid #e5e8ea;
+  border-bottom:1px solid #e5e8ea;
+}
+.vinfast-bg{
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 86% 22%,rgba(244,123,0,.075),transparent 24%),
+    linear-gradient(115deg,rgba(16,20,24,.035) 1px,transparent 1px);
+  background-size:auto,80px 80px;
+  pointer-events:none;
+}
+.vinfast-inner{
+  width:min(1200px,88%);
+  margin:auto;
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+.vinfast-copy{max-width:610px}
+.vinfast-kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#f47b00;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+  margin-bottom:18px;
+}
+.vinfast-kicker:before{
+  content:"";
+  width:38px;
+  height:2px;
+  background:#f47b00;
+}
+.vinfast-copy h2{
+  margin:0;
+  color:#101418;
+  font-family:"Barlow Condensed",Arial,sans-serif;
+  font-size:clamp(52px,6vw,78px);
+  line-height:.88;
+  text-transform:uppercase;
+  letter-spacing:-.02em;
+}
+.vinfast-copy h2 span{color:#f47b00}
+.vinfast-intro{
+  margin:27px 0 0;
+  color:#3f484f;
+  font-size:16px;
+  line-height:1.75;
+  max-width:580px;
+}
+.vinfast-text{
+  margin:15px 0 0;
+  color:#68727a;
+  font-size:13px;
+  line-height:1.8;
+  max-width:570px;
+}
+.vinfast-text strong{color:#101418}
+.vinfast-stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  margin-top:32px;
+  border:1px solid #dfe3e6;
+  background:#fff;
+}
+.vf-stat{
+  min-height:96px;
+  padding:18px;
+  background:#f7f8f9;
+  border-right:1px solid #dfe3e6;
+}
+.vf-stat:last-child{border-right:0}
+.vf-stat strong{
+  display:block;
+  font:800 28px/1 "Barlow Condensed";
+  color:#101418;
+  text-transform:uppercase;
+}
+.vf-stat span{
+  display:block;
+  margin-top:7px;
+  color:#68727a;
+  font-size:9px;
+  line-height:1.4;
+  text-transform:uppercase;
+  letter-spacing:.04em;
+}
+.vinfast-actions{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:16px;
+  margin-top:29px;
+}
+.vinfast-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  min-height:51px;
+  padding:0 22px;
+  background:#f47b00;
+  color:#fff;
+  font:800 18px/1 "Barlow Condensed";
+  text-transform:uppercase;
+  transition:.3s ease;
+}
+.vinfast-button span{font-size:20px}
+.vinfast-button:hover{
+  background:#101418;
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 14px 30px rgba(16,20,24,.14);
+}
+.vinfast-secondary{
+  color:#101418;
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  border-bottom:1px solid #aeb5ba;
+  padding-bottom:5px;
+  transition:.25s;
+}
+.vinfast-secondary:hover{
+  color:#f47b00;
+  border-color:#f47b00;
+}
+.vinfast-visual{
+  min-height:485px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.vinfast-image-wrap{
+  border:0;
+  outline:0;
+  width:100%;
+  height:430px;
+  overflow:hidden;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:none;
+  position:relative;
+}
+.vinfast-image-wrap img{
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  transition:transform 1s cubic-bezier(.2,.7,.2,1);
+}
+.vinfast-visual:hover .vinfast-image-wrap img{transform:scale(1.045)}
+.vinfast-floating-card{
+  display:none !important;
+}
+.vinfast-outline{
+  position:absolute;
+  right:-5px;
+  top:0;
+  color:rgba(16,20,24,.035);
+  font:900 150px/.8 "Barlow Condensed";
+  pointer-events:none;
+}
+@media(max-width:850px){
+  .vinfast-inner{
+    grid-template-columns:1fr;
+    gap:45px;
+  }
+  .vinfast-copy{max-width:none}
+  .vinfast-visual{min-height:400px}
+  .vinfast-image-wrap{height:390px}
+}
+@media(max-width:600px){
+  .vinfast-section{padding:70px 0}
+  .vinfast-stats{grid-template-columns:1fr}
+  .vf-stat{border-right:0;border-bottom:1px solid #dfe3e6}
+  .vf-stat:last-child{border-bottom:0}
+  .vinfast-visual{min-height:330px}
+  .vinfast-image-wrap{height:285px}
+  .vinfast-actions{align-items:flex-start;flex-direction:column}
+}
+</style>
+
+</head>
+
+  <body>
+
+<div id="unicoPageTransition" aria-hidden="false">
+  <div class="unico-loader-stage">
+    <div class="unico-loader-road"></div>
+    <div class="unico-loader-car" aria-hidden="true">
+      <div class="unico-car-body">
+        <div class="unico-car-window"></div>
+        <div class="unico-car-light"></div>
+        <div class="unico-car-bumper"></div>
+      </div>
+      <div class="unico-car-wheel left"></div>
+      <div class="unico-car-wheel right"></div>
+    </div>
+    <div class="unico-loader-label">UNICO <span>MOTORS</span></div>
+  </div>
+</div>
+
+    <div class="utility">
+      <a href="about.html#contact">Business Enquiries</a>
+      <a href="about.html#contact">Fleet Support</a>
+      <a href="about.html#contact">+91 81009 29501</a>
+    </div>
+
+    <header class="nav">
+      <a href="index.html" aria-label="UNICO MOTORS Home">
+        <img
+          class="logo"
+          src="assets/unico-home-logo.png"
+          alt="UNICO MOTORS"
+        />
+      </a>
+      <nav class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="about.html#contact">Contact Us</a>
+        <a class="active" href="blog.html">Blog</a>
+      </nav>
+      <div class="nav-right">
+        <a class="nav-cta" href="about.html#contact">Get Started</a>
+        <button class="menu" type="button" aria-label="Menu">
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- CLEAN EDITORIAL HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="eyebrow">UNICO MOTORS · AUTO CARE INSIGHTS</div>
+          <h1>
+            What’s the Best Time to Schedule Your Car’s
+            <span class="accent">Tune-Up?</span>
+          </h1>
+
+          <div class="hero-meta">
+            <span>By <b>admin</b></span>
+            <span class="dot"></span>
+            <span>21 March 2025</span>
+            <span class="dot"></span>
+            <span>No Comments</span>
+          </div>
+
+          <div class="hero-description">
+            Practical automotive knowledge for better maintenance decisions,
+            vehicle reliability and long-term workshop performance.
+          </div>
+
+          <a class="hero-read" href="#article"> Read Article <span>→</span> </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- NATURAL PAGE SCROLL: no nested scrolling pane -->
+    <section class="blog-section">
+      <div class="container blog-layout">
+        <aside class="sidebar">
+          <section class="side-card">
+            <h2 class="side-title">Search</h2>
+            <form class="search" onsubmit="return false;">
+              <input
+                id="searchInput"
+                type="search"
+                placeholder="Search here..."
+              />
+              <button type="button" aria-label="Search">⌕</button>
+            </form>
+          </section>
+
+          <section class="side-card">
+            <h2 class="side-title">Categories</h2>
+            <div class="category-list">
+              <a class="category" href="blog.html?category=Auto%20Car"
+                >Auto Car <span>(05)</span></a
+              >
+              <a class="category" href="blog.html?category=Battery%20Check"
+                >Battery Check <span>(01)</span></a
+              >
+              <a
+                class="category"
+                href="blog.html?category=Car%20Denting%20Repair"
+                >Car Denting Repair <span>(02)</span></a
+              >
+              <a class="category" href="blog.html?category=Engine%20Repair"
+                >Engine Repair <span>(01)</span></a
+              >
+              <a
+                class="category"
+                href="blog.html?category=Exhaust%20System%20Repair"
+                >Exhaust System Repair <span>(01)</span></a
+              >
+              <a class="category" href="blog.html?category=Hydro%20Dripping"
+                >Hydro Dripping <span>(01)</span></a
+              >
+              <a class="category" href="blog.html?category=Workshop"
+                >Workshop <span>(03)</span></a
+              >
+            </div>
+          </section>
+
+          <section class="side-card">
+            <h2 class="side-title">Recent Posts</h2>
+            <div class="recent-list">
+              <a
+                class="recent"
+                href="why-regular-car-maintenance-is-crucial-for-your-vehicles-longevity.html"
+              >
+                <img
+                  src="https://new.unicomotors.com/wp-content/uploads/2025/03/port-10-166x186.webp"
+                  alt=""
+                />
+                <div>
+                  <strong
+                    >How to Extend the Life of Your Car with Preventive
+                    Maintenance</strong
+                  ><small>21 March · <b>admin</b></small>
+                </div>
+              </a>
+              <a
+                class="recent"
+                href="whats-the-best-time-to-schedule-your-cars-tune-up.html"
+              >
+                <img
+                  src="https://new.unicomotors.com/wp-content/uploads/2025/03/image-blog-5-166x186.webp"
+                  alt=""
+                />
+                <div>
+                  <strong
+                    >What’s the Best Time to Schedule Your Car’s
+                    Tune-Up?</strong
+                  ><small>21 March · <b>admin</b></small>
+                </div>
+              </a>
+              <a
+                class="recent"
+                href="top-10-car-repairs-that-can-save-you-money-in-the-long-run.html"
+              >
+                <img
+                  src="https://new.unicomotors.com/wp-content/uploads/2025/03/image-blog-3-166x186.webp"
+                  alt=""
+                />
+                <div>
+                  <strong
+                    >Top 10 Car Repairs That Can Save You Money in the Long
+                    Run</strong
+                  ><small>21 March · <b>admin</b></small>
+                </div>
+              </a>
+              <a
+                class="recent"
+                href="car-service-myths-debunked-what-you-really-need-to-know.html"
+              >
+                <img
+                  src="https://new.unicomotors.com/wp-content/uploads/2025/03/image-blog-6-166x186.webp"
+                  alt=""
+                />
+                <div>
+                  <strong
+                    >Car service myths debunked: What you really need to
+                    know</strong
+                  ><small>21 March · <b>admin</b></small>
+                </div>
+              </a>
+            </div>
+          </section>
+
+          <section class="side-card">
+            <h2 class="side-title">Tag Cloud</h2>
+            <div class="tags">
+              <span class="tag">Auto Car</span
+              ><span class="tag">Battery Check</span
+              ><span class="tag">Car</span> <span class="tag">Car Services</span
+              ><span class="tag">Consultant</span
+              ><span class="tag">Denting</span> <span class="tag">Engine</span
+              ><span class="tag">Engine Repair</span
+              ><span class="tag">Exhaust</span> <span class="tag">Hydro</span
+              ><span class="tag">Repair</span>
+            </div>
+          </section>
+        </aside>
+
+        <main class="article" id="article">
+          <header class="article-head reveal">
+            <div class="article-label">Denting · Auto Care</div>
+            <h2 class="article-title">
+              What’s the Best Time to Schedule Your Car’s Tune-Up?
+            </h2>
+            <div class="article-meta">
+              <span>21 March 2025</span>
+              <span class="dot"></span>
+              <span>By admin</span>
+            </div>
+          </header>
+
+          <div class="article-body">
+            <p class="lead reveal">
+              Car filters, including engine air filters, oil filters, fuel
+              filters, cabin air filters, and transmission filters, play a vital
+              role in maintaining the health and performance of your vehicle.
+              Regular replacement of these filters ensures that your car runs
+              smoothly by preventing dirt, debris, and contaminants from
+              damaging critical components. Dirty or clogged filters can lead to
+              poor fuel efficiency, engine performance issues, and costly
+              repairs.
+            </p>
+
+            <p class="reveal">
+              By staying on top of regular filter maintenance, you can improve
+              fuel economy, engine longevity, and air quality inside your
+              vehicle.
+            </p>
+
+            <p class="reveal">
+              Replacing filters at recommended intervals helps avoid unnecessary
+              strain on your engine and other systems, ultimately extending the
+              life of your car. Keeping your filters clean and functional is
+              essential for maintaining a safe, reliable, and efficient vehicle.
+            </p>
+
+            <h2 class="reveal">Types of Car Filters and Their Functions:</h2>
+
+            <p class="reveal">
+              Replacing filters at recommended intervals helps avoid unnecessary
+              strain on your engine and other systems, ultimately extending the
+              life of your car. Keeping your filters clean and functional is
+              essential for maintaining a safe, reliable, and efficient vehicle.
+            </p>
+
+            <div class="filter-row reveal">
+              <div class="filter-name">Engine Air Filter:</div>
+              <p>
+                The engine air filter ensures that only clean air enters the
+                engine for combustion. Over time, dirt and debris can clog the
+                filter, leading to decreased engine performance, poor fuel
+                efficiency, and potential damage to the engine. Regular
+                replacement helps keep your car running smoothly.
+              </p>
+            </div>
+
+            <div class="filter-row reveal">
+              <div class="filter-name">Oil Filter:</div>
+              <p>
+                The oil filter traps contaminants in your engine oil, ensuring
+                that the oil remains clean and lubricates the engine
+                effectively. A clogged oil filter can cause the engine oil to
+                become dirty, resulting in reduced engine efficiency and even
+                engine failure. Replacing the oil filter regularly during oil
+                changes is vital for engine health.
+              </p>
+            </div>
+
+            <div class="filter-row reveal">
+              <div class="filter-name">Cabin Air Filter:</div>
+              <p>
+                The cabin air filter helps maintain clean air inside the vehicle
+                by filtering out dust, pollen, and other allergens. A clogged
+                cabin air filter can lead to poor air quality inside the car,
+                reduced airflow, and even damage to the HVAC system. Regular
+                replacement keeps your cabin air fresh and your air conditioning
+                working efficiently.
+              </p>
+            </div>
+
+            <div class="filter-row reveal">
+              <div class="filter-name">Transmission Filter:</div>
+              <p>
+                The transmission filter keeps the transmission fluid clean,
+                preventing debris from causing damage to the transmission
+                system. If neglected, a clogged transmission filter can lead to
+                shifting problems and costly repairs. Regular replacement helps
+                ensure smooth shifting the transmission.
+              </p>
+            </div>
+
+            <div class="quote reveal">
+              <img
+                class="quote-mark"
+                src="https://new.unicomotors.com/wp-content/uploads/2025/02/icon-qoute.png"
+                alt=""
+              />
+              <p>
+                “Tortor dis efficitur risus placerat libero condimentum faucibus
+                enim luctus. Port titor per si nisi sodales accumsan. Accumsan
+                suscipit semper pharetra pretium consequat primis.”
+              </p>
+              <div class="quote-author">Kathryn Murphy</div>
+            </div>
+
+            <img
+              class="feature-image reveal"
+              src="https://new.unicomotors.com/wp-content/uploads/2025/02/img-crs-sg.webp"
+              alt="Professional car workshop"
+            />
+
+            <h2 class="reveal">Why Regular Replacement Matters:</h2>
+
+            <div class="reason reveal">
+              <div class="reason-title">Improves Performance:</div>
+              <p>
+                Clean filters ensure optimal engine, transmission, and HVAC
+                performance.
+              </p>
+            </div>
+            <div class="reason reveal">
+              <div class="reason-title">Boosts Fuel Efficiency:</div>
+              <p>
+                Properly functioning filters help maintain fuel economy by
+                allowing smooth airflow and clean fuel.
+              </p>
+            </div>
+            <div class="reason reveal">
+              <div class="reason-title">Prevents Repairs:</div>
+              <p>
+                Regularly replacing filters reduces the risk of damage to key
+                car components, saving you money in the long run.
+              </p>
+            </div>
+            <div class="reason reveal">
+              <div class="reason-title">Enhances Air Quality:</div>
+              <p>
+                Replacing cabin air filters helps maintain fresh, breathable air
+                inside your car, improving comfort and health.
+              </p>
+            </div>
+
+            <h2 class="reveal">Signs Your Filters Need Replacing:</h2>
+
+            <div class="signs reveal">
+              <div class="sign"><b>✓</b>Decreased fuel efficiency</div>
+              <div class="sign"><b>✓</b>Engine misfires or rough idling</div>
+              <div class="sign">
+                <b>✓</b>Poor acceleration or sluggish performance
+              </div>
+              <div class="sign">
+                <b>✓</b>Unpleasant odors or poor air quality inside the car
+              </div>
+              <div class="sign">
+                <b>✓</b>Visible dirt or debris in the filters
+              </div>
+            </div>
+
+            <h2 class="reveal">Conclusion:</h2>
+            <p class="reveal">
+              The transmission filter keeps the transmission fluid clean,
+              preventing debris from causing damage to the transmission system.
+              If neglected, a clogged transmission filter can lead to shifting
+              problems and costly repairs. Regular replacement helps ensure
+              smooth shifting the transmission.
+            </p>
+
+            <div class="tags-share reveal">
+              <div>
+                <strong>Tags:</strong><span class="article-tag">Denting</span>
+              </div>
+              <div class="share">
+                <b>Share:</b><a href="#">f</a><a href="#">t</a><a href="#">p</a
+                ><a href="#">in</a>
+              </div>
+            </div>
+
+            <div class="author-card reveal">
+              <div class="avatar"></div>
+              <div class="author-name">admin</div>
+            </div>
+
+            <section class="comment-box reveal">
+              <h2>Leave a Comment</h2>
+              <form class="form-grid" onsubmit="return false;">
+                <div class="form-group">
+                  <label>Full Name</label
+                  ><input placeholder="e.g. Oliver Spiteri" />
+                </div>
+                <div class="form-group">
+                  <label>Email Address</label
+                  ><input type="email" placeholder="example@email.com" />
+                </div>
+                <div class="form-group">
+                  <label>Messages</label
+                  ><textarea
+                    placeholder="Write your message here..."
+                  ></textarea>
+                </div>
+                <button class="submit">Post Comment</button>
+              </form>
+            </section>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container cta-inner">
+        <div>
+          <h2>Keep Your Vehicles<br />Workshop Ready.</h2>
+          <p>
+            Professional multi-brand car care and workshop services from UNICO
+            MOTORS.
+          </p>
+        </div>
+        <a class="cta-button" href="about.html#contact">Talk To Us</a>
+      </div>
+    </section>
+
+    
+
+    <!-- =======================================================
+         VINFAST DEALER LOCATOR
+    ======================================================= -->
+    <section class="vinfast-section" id="vinfast" aria-label="VinFast electric mobility">
+      <div class="vinfast-bg"></div>
+      <div class="vinfast-inner">
+
+        <div class="vinfast-copy reveal">
+          <div class="vinfast-kicker">UNICO MOTORS × VINFAST</div>
+
+          <h2>Step Into the<br><span>Electric Future.</span></h2>
+
+          <p class="vinfast-intro">
+            VinFast is building a new premium electric-mobility experience in India,
+            combining modern EV technology, distinctive SUV design and a growing
+            customer-focused sales and service ecosystem.
+          </p>
+
+          <p class="vinfast-text">
+            The India portfolio includes the <strong>VF 6</strong> and <strong>VF 7</strong>,
+            premium electric SUVs designed around connected technology, intelligent
+            driver assistance and everyday usability. VinFast has also been expanding
+            its local presence through manufacturing, dealerships and after-sales
+            infrastructure across the country.
+          </p>
+
+          <div class="vinfast-stats">
+            <div class="vf-stat">
+              <strong>VF 6</strong>
+              <span>Compact 5-seat eSUV</span>
+            </div>
+            <div class="vf-stat">
+              <strong>VF 7</strong>
+              <span>Premium 5-seat eSUV</span>
+            </div>
+            <div class="vf-stat">
+              <strong>3S</strong>
+              <span>Sales · Service · Spares</span>
+            </div>
+          </div>
+
+          <div class="vinfast-actions">
+            <a class="vinfast-button" href="vinfast.html" target="_blank" rel="noopener noreferrer">
+              Find Us At VinFast Dealer <span>↗</span>
+            </a>
+            <a class="vinfast-secondary" href="vinfast.html" target="_blank" rel="noopener noreferrer">
+              Explore VinFast India
+            </a>
+          </div>
+        </div>
+
+        <div class="vinfast-visual">
+          <div class="vinfast-image-wrap">
+            <img
+              src="https://vinfastauto.in/static/delivery/limo-green/images/color-silver.webp"
+              alt="VinFast electric vehicle"
+              loading="lazy"
+            />
+          </div>
+
+
+          <div class="vinfast-outline">EV</div>
+        </div>
+
+      </div>
+    </section>
+
+<footer>
+      <div class="container footer-grid">
+        <div>
+          <img
+            class="footer-logo"
+            src="assets/unico-home-logo.png"
+            alt="UNICO MOTORS"
+          />
+          <p>
+            UNICO MOTORS, a unit of Unico Logistics &amp; Carrier Pvt. Ltd. with
+            myTVS.
+          </p>
+          <p>
+            Plot No – 7, Jothbhim, Po. Hatgacha, Ps. KLC (Near Green Field
+            Heights, New Town), Dist: South 24 Paraganas, Kolkata – 700 156,
+            West Bengal, India.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About Us</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>+91 81009 29501<br />1800 889 2021<br />info@unicomotors.com</p>
+          <p>Professional multi-brand car care and workshop services.</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        © 2025 UNICO MOTORS. All Rights Reserved.
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const items = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+          const io = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("show");
+                  io.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.08 },
+          );
+          items.forEach((item) => io.observe(item));
+        } else {
+          items.forEach((item) => item.classList.add("show"));
+        }
+
+        const input = document.getElementById("searchInput");
+        input?.addEventListener("input", () => {
+          const q = input.value.toLowerCase().trim();
+          document.querySelectorAll(".category,.recent").forEach((item) => {
+            item.style.display =
+              !q || item.textContent.toLowerCase().includes(q) ? "" : "none";
+          });
+        });
+      })();
+    </script>
+  
+<script id="unico-page-transition-js">
+(function(){
+  "use strict";
+  var overlay=document.getElementById("unicoPageTransition");
+  if(!overlay)return;
+  var root=document.documentElement, navigating=false, TRANSITION_MS=1120;
+
+  function hideLoader(){
+    overlay.classList.add("is-hidden");
+    overlay.setAttribute("aria-hidden","true");
+    root.classList.remove("unico-transition-lock");
+  }
+  function showLoader(){
+    overlay.classList.remove("is-hidden");
+    overlay.setAttribute("aria-hidden","false");
+    root.classList.add("unico-transition-lock");
+  }
+
+  root.classList.add("unico-transition-lock");
+  window.addEventListener("load",function(){setTimeout(hideLoader,1050)});
+  window.addEventListener("pageshow",function(e){if(e.persisted){navigating=false;hideLoader()}});
+
+  document.addEventListener("click",function(e){
+    var link=e.target.closest?e.target.closest("a[href]"):null;
+    if(!link||navigating)return;
+
+    var href=link.getAttribute("href");
+    if(!href||href.charAt(0)==="#"||/^(mailto:|tel:|javascript:|data:)/i.test(href))return;
+    if(link.target&&link.target!=="_self")return;
+    if(link.hasAttribute("download"))return;
+
+    var url;
+    try{url=new URL(href,window.location.href)}catch(err){return}
+    if(url.origin!==window.location.origin)return;
+    if(url.pathname===window.location.pathname&&!url.search&&!url.hash)return;
+
+    var ext=url.pathname.split(".").pop().toLowerCase();
+    if(ext&&ext!=="html"&&ext!=="htm")return;
+
+    e.preventDefault();
+    navigating=true;
+    showLoader();
+    setTimeout(function(){window.location.href=url.href},TRANSITION_MS);
+  },true);
+})();
+</script>
+
+</body>
+</html>
